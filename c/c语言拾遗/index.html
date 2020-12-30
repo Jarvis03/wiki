@@ -1,227 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>C语言拾遗 - My Docs</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>C语言拾遗 - My Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "C\u8bed\u8a00\u62fe\u9057";
+    var mkdocs_page_input_path = "c\\c\u8bed\u8a00\u62fe\u9057.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
 
-    <body>
+<body class="wy-body-for-nav" role="document">
 
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
+  <div class="wy-grid-for-nav">
 
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">My Docs</a>
-                </div>
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> My Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
 
-                <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Welcome to MkDocs</a>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li class="active">
-    <a href="./">C语言拾遗</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
-</li>
-                                    
-<li >
-    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
-</li>
-                                    
-<li >
-    <a href="../../c_plusplus/readme/">Readme</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../linux/">Linux_learn</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/IO/">IO</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/MakeFile/">MakeFile</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/arm汇编/">ARM汇编</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/cmake/">CMake</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/link_list/">链表</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/linux_shell/">Linux shell</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/开发环境搭建/">开发环境搭建</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/数据结构/">链表</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/编译/">编译</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/网络编程/">网络编程</a>
-</li>
-                                    
-<li >
-    <a href="../../linux/进程与线程/">进程</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../python/readme/">Readme</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li >
-                                <a rel="next" href="../..">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../../c_plusplus/cpp知识点/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#c">C语言遗漏点</a></li>
-            <li><a href="#define">define</a></li>
-        <li class="main "><a href="#stringificationx">表示字符串化操作符（stringification）。其作用是：将宏定义中的传入参数名转换成用一对双引号括起来参数名字符串。其只能用于有传入参数的宏定义中，且必须置于宏定义体中的参数名前。说白了，他是给x加双引号：</a></li>
-            <li><a href="#4">4. \ 行继续操作</a></li>
-            <li><a href="#5-va_args">5. VA_ARGS</a></li>
-            <li><a href="#typedef">typedef</a></li>
-            <li><a href="#_2">数组</a></li>
-            <li><a href="#switch">switch</a></li>
-            <li><a href="#static">static</a></li>
-            <li><a href="#_3">逗号运算符</a></li>
-            <li><a href="#_4">{}作用域</a></li>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to MkDocs</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">C</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">C语言拾遗</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#define">define</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1">1. ## 链接操作符</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2">2. #@字符化操作</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3">3. # 字符串化操作符</a>
+    </li>
+        </ul>
+    </li>
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">C plusplus</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c_plusplus/cpp%E7%9F%A5%E8%AF%86%E7%82%B9/">Cpp知识点</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c_plusplus/qt%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86%E7%82%B9/">Qt入门知识点</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c_plusplus/readme/">Readme</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Linux</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/">Linux_learn</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/IO/">IO</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/MakeFile/">MakeFile</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/arm%E6%B1%87%E7%BC%96/">ARM汇编</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/cmake/">CMake</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/link_list/">链表</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/linux_shell/">Linux shell</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">开发环境搭建</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">链表</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/%E7%BC%96%E8%AF%91/">编译</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">网络编程</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../linux/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/">进程</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Python</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/readme/">Readme</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
 
-<h2 id="c">C语言遗漏点</h2>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">My Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>C &raquo;</li>
+        
+      
+    
+    <li>C语言拾遗</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="c">C语言遗漏点</h2>
 <h3 id="define">define</h3>
 <p>宏定义中有几个符号需要注意，如<code>#</code>，<code>##</code>，<code>\</code>，<code>#@</code>,下面定义了三个宏</p>
-<pre><code class="c">#define Conn(x,y) x##y
+<pre><code class="language-c">#define Conn(x,y) x##y
 #define ToChar(x) #@x
 #define ToString(x) #x
 </code></pre>
-
 <h5 id="1">1. <code>##</code> 链接操作符</h5>
-<pre><code class="c">int n = Conn(123,456);
+<pre><code class="language-c">int n = Conn(123,456);
      ==&gt; int n=123456;
 char* str = Conn(&quot;asdf&quot;, &quot;adf&quot;);
      ==&gt; char* str = &quot;asdfadf&quot;;
 </code></pre>
-
 <p>需要注意的是 <code>##</code> 左右符号必须能够组成一个有意义的符号，否则会报错。</p>
 <h5 id="2">2. <code>#@</code>字符化操作</h5>
 <blockquote>
 <p><code>#@x</code>只能用于有传入参数的宏定义中，且必须置于宏定义体中的参数名前。作用是将传的单字符参数名转换成字符，以一对单引用括起来其实就是给<code>x</code>加上单引号，结果返回是一个<code>const char</code>。</p>
 </blockquote>
 <p>举例说：</p>
-<pre><code class="c">char a = ToChar(1);
+<pre><code class="language-c">char a = ToChar(1);
      ==&gt; char a='1';
 </code></pre>
-
 <p>做个越界试验</p>
-<pre><code class="c">char a = ToChar(123);
+<pre><code class="language-c">char a = ToChar(123);
      ==&gt; char a='3';
 </code></pre>
-
 <p>但是如果你的参数超过四个字符，编译器就给给你报错了</p>
 <pre><code>！error C2015: too many characters in constant ：P
 </code></pre>
-
 <h5 id="3">3. <code>#</code> 字符串化操作符</h5>
 <blockquote>
 <h1 id="stringificationx">表示字符串化操作符（stringification）。其作用是：将宏定义中的传入参数名转换成用一对双引号括起来参数名字符串。其只能用于有传入参数的宏定义中，且必须置于宏定义体中的参数名前。说白了，他是给x加双引号：</h1>
 </blockquote>
-<pre><code class="c"> char* str = ToString(123132);
+<pre><code class="language-c"> char* str = ToString(123132);
  ==&gt; char* str=&quot;123132&quot;;
 </code></pre>
-
 <p>如果你想要对展开后的宏参数进行字符串化，则需要使用两层宏。</p>
-<pre><code class="c">#define xstr(s) str(s)
+<pre><code class="language-c">#define xstr(s) str(s)
 #define str(s) #s
 #define foo 4
 str (foo)
@@ -231,7 +192,6 @@ xstr (foo)
      ==&gt; str (4)
      ==&gt; &quot;4&quot;
 </code></pre>
-
 <p><code>s</code>参数在<code>str</code>宏中被字符串化，所以它不是优先被宏展开。然而<code>s</code>参数是<code>xstr</code>宏的一个普通参数，在被传递到<code>str</code>宏之前已经被宏展开。</p>
 <h5 id="4">4. <code>\</code> 行继续操作</h5>
 <blockquote>
@@ -240,20 +200,18 @@ xstr (foo)
 <h5 id="5-va_args">5. VA_ARGS</h5>
 <h3 id="_1"></h3>
 <p><code>__VA_ARGS__</code>宏用来接受不定数量的参数。例如：</p>
-<pre><code class="c">#define eprintf(...) fprintf (stderr, __VA_ARGS__)
+<pre><code class="language-c">#define eprintf(...) fprintf (stderr, __VA_ARGS__)
 
 eprintf (&quot;%s:%d: &quot;, input_file, lineno)
 ==&gt;  fprintf (stderr, &quot;%s:%d: &quot;, input_file, lineno)
 </code></pre>
-
 <p>当<code>__VA_ARGS__</code>宏前面<code>##</code>时，可以省略参数输入。
  例如：</p>
-<pre><code class="c">#define eprintf(format, ...) fprintf (stderr, format, ##__VA_ARGS__)
+<pre><code class="language-c">#define eprintf(format, ...) fprintf (stderr, format, ##__VA_ARGS__)
 
 eprintf (&quot;success!\n&quot;)
 ==&gt; fprintf(stderr, &quot;success!\n&quot;);
 </code></pre>
-
 <h3 id="typedef">typedef</h3>
 <p>用户自定义类型来替代系统基本类型。</p>
 <blockquote>
@@ -280,10 +238,9 @@ eprintf (&quot;success!\n&quot;)
 </ul>
 <p>在上面的代码中，<code>const PCHAR</code> 是否相当于<code>const char*</code> 呢？</p>
 <p>答案是否定的，原因很简单，<code>typedef</code> 是用来定义一种类型的新别名的，它不同于宏，不是简单的字符串替换。因此，<code>const PCHAR</code>中的  <code>const</code> 给予了整个指针本身常量性，也就是形成了常量指针<code>char*const</code>（一个指向<code>char</code>的常量指针）。即它实际上相当于<code>char*const</code>，而不是<code>const  char*</code>（指向常量 char 的指针）。当然，要想让 <code>const PCHAR</code> 相当于 <code>const char*</code> 也很容易，如下面的代码所示： </p>
-<pre><code class="c">typedef const char* PCHAR;
+<pre><code class="language-c">typedef const char* PCHAR;
 int strcmp(PCHAR， PCHAR);
 </code></pre>
-
 <p>其实，无论什么时候，只要为指针声明 typedef，那么就应该在最终的 typedef 名称中加一个 const，以使得该指针本身是常量。</p>
 <ul>
 <li>还需要特别注意的是，虽然 <code>typedef</code> 并不真正影响对象的存储特性，但在语法上它还是一个存储类的关键字，就像 <code>auto</code>、<code>extern</code>、<code>static</code> 和 <code>register</code> 等关键字一样。因此，像下面这种声明方式是不可行的：</li>
@@ -292,19 +249,17 @@ int strcmp(PCHAR， PCHAR);
   typedef static int INT_STATIC;</code></p>
 <h3 id="_2">数组</h3>
 <h5 id="1_2">1.数组名为常量</h5>
-<pre><code class="c">int array[4];
+<pre><code class="language-c">int array[4];
 array++; // 错误，不可使用  ++
 int *p = array;
 p++;     //正确
 </code></pre>
-
 <h5 id="2_2">2. 数组首地址</h5>
 <p>数组名字即为数组首地址</p>
-<pre><code class="c">int array[5];
+<pre><code class="language-c">int array[5];
 array &lt;=&gt; &amp;array[0]; //都是首元素地址 类型为 int*
 &amp;array      //类型指向 int [5]的指针类型，数组指针
 </code></pre>
-
 <h3 id="switch">switch</h3>
 <p>switch 类型不能是 <code>float</code>,<code>double</code>,<code>bool</code></p>
 <h3 id="static">static</h3>
@@ -312,83 +267,58 @@ array &lt;=&gt; &amp;array[0]; //都是首元素地址 类型为 int*
 <p>全局变量：限制作用域</p>
 <p>函数 ： 限制作用域</p>
 <h3 id="_3">逗号运算符</h3>
-<h3 id="_4">{}作用域</h3></div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
-        </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+<h3 id="_4">{}作用域</h3>
+              
             </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../c_plusplus/cpp%E7%9F%A5%E8%AF%86%E7%82%B9/" class="btn btn-neutral float-right" title="Cpp知识点">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Welcome to MkDocs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
         </div>
-    </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../c_plusplus/cpp%E7%9F%A5%E8%AF%86%E7%82%B9/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
-    </body>
+</body>
 </html>

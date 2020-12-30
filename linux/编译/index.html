@@ -1,183 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>编译 - My Docs</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>编译 - My Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u7f16\u8bd1";
+    var mkdocs_page_input_path = "linux\\\u7f16\u8bd1.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
 
-    <body>
+<body class="wy-body-for-nav" role="document">
 
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
+  <div class="wy-grid-for-nav">
 
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">My Docs</a>
-                </div>
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> My Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
 
-                <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Welcome to MkDocs</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../c/c语言拾遗/">C语言拾遗</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
-</li>
-                                    
-<li >
-    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
-</li>
-                                    
-<li >
-    <a href="../../c_plusplus/readme/">Readme</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../">Linux_learn</a>
-</li>
-                                    
-<li >
-    <a href="../IO/">IO</a>
-</li>
-                                    
-<li >
-    <a href="../MakeFile/">MakeFile</a>
-</li>
-                                    
-<li >
-    <a href="../arm汇编/">ARM汇编</a>
-</li>
-                                    
-<li >
-    <a href="../cmake/">CMake</a>
-</li>
-                                    
-<li >
-    <a href="../link_list/">链表</a>
-</li>
-                                    
-<li >
-    <a href="../linux_shell/">Linux shell</a>
-</li>
-                                    
-<li >
-    <a href="../开发环境搭建/">开发环境搭建</a>
-</li>
-                                    
-<li >
-    <a href="../数据结构/">链表</a>
-</li>
-                                    
-<li class="active">
-    <a href="./">编译</a>
-</li>
-                                    
-<li >
-    <a href="../网络编程/">网络编程</a>
-</li>
-                                    
-<li >
-    <a href="../进程与线程/">进程</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../python/readme/">Readme</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li >
-                                <a rel="next" href="../数据结构/">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../网络编程/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#_1">编译过程</a></li>
-            <li><a href="#1">1. 预处理</a></li>
-            <li><a href="#2">2. 编译</a></li>
-            <li><a href="#3">3. 汇编</a></li>
-            <li><a href="#4">4. 链接</a></li>
-            <li><a href="#5-gcc">5. GCC 编译选项</a></li>
-            <li><a href="#6gdb">6.GDB调试</a></li>
-            <li><a href="#7-c">7. C程序的储存空间布局</a></li>
-            <li><a href="#8">8. 共享库</a></li>
-            <li><a href="#_5">其他工具</a></li>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to MkDocs</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">C</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c/c%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/">C语言拾遗</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">C plusplus</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c_plusplus/cpp%E7%9F%A5%E8%AF%86%E7%82%B9/">Cpp知识点</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c_plusplus/qt%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86%E7%82%B9/">Qt入门知识点</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c_plusplus/readme/">Readme</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Linux</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Linux_learn</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../IO/">IO</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../MakeFile/">MakeFile</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../arm%E6%B1%87%E7%BC%96/">ARM汇编</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cmake/">CMake</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../link_list/">链表</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux_shell/">Linux shell</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">开发环境搭建</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">链表</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">编译</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1">1. 预处理</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2">2. 编译</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3">3. 汇编</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4">4. 链接</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-gcc">5. GCC 编译选项</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1_1">1. 总体选项</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2_1">2. 警告和出错</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6gdb">6.GDB调试</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1_2">1.设置断点</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2_2">2. 查看断点</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3_1">3. 运行代码</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4_1">4. 查看变量值</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">段错误</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1_3">1. 调试设置</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2_3">2. 段错误调试</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-c">7. C程序的储存空间布局</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8">8. 共享库</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">静态库步骤</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">动态库步骤</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">其他工具</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-readelf">1. readelf</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-size">2. size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-objcopy">3. objcopy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-objdump">4. objdump</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5nm">5.nm</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-addr2line">6. addr2line</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-strip">7. strip</a>
+    </li>
+        </ul>
+    </li>
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">网络编程</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/">进程</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Python</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/readme/">Readme</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
 
-<h1 id="_1">编译过程</h1>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">My Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Linux &raquo;</li>
+        
+      
+    
+    <li>编译</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">编译过程</h1>
 <p>笔者使用 使用编译器为<code>GCC</code></p>
 <blockquote>
 <p>gcc 一般格式为 GCC [选项] 要编译的文件 [选项]  目标文件</p>
@@ -325,7 +347,7 @@
 <li>加载相关：包括程序头表相关信息。 </li>
 <li>链接相关：节头表相关信息。 </li>
 </ul>
-<pre><code class="shell">$ readelf -h a.out
+<pre><code class="language-shell">$ readelf -h a.out
 ELF Header:
   Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
   Class:                             ELF64
@@ -348,32 +370,28 @@ ELF Header:
   Section header string table index: 28
 
 </code></pre>
-
 <h4 id="2-size">2. size</h4>
 <p>读取各个段大小</p>
-<pre><code class="shell">$size a.out
+<pre><code class="language-shell">$size a.out
    text    data     bss     dec     hex filename
    1286     552       8    1846     736 file_io
 
 </code></pre>
-
 <h4 id="3-objcopy">3. objcopy</h4>
 <p>将目标文件的一部分或者全部拷贝到另一目标文件，或者实现目标文件类型转换</p>
-<pre><code class="shell">$objcopy -O binary a.out a.bin
+<pre><code class="language-shell">$objcopy -O binary a.out a.bin
 </code></pre>
-
 <h4 id="4-objdump">4. objdump</h4>
 <p>查看目标文件或者可执行的目标文件的构成</p>
 <ul>
 <li><code>-D</code>：反汇编所有的section</li>
 <li><code>-S</code>：尽可能反汇编出源代码，尤其是当编译的时候指定了<code>-g</code>这种调试参数时，效果比较明显，隐含了<code>-d</code>参数</li>
 </ul>
-<pre><code class="shell">$objdump -DS a.out &gt; a.dis
+<pre><code class="language-shell">$objdump -DS a.out &gt; a.dis
 </code></pre>
-
 <h4 id="5nm">5.nm</h4>
 <p>用于显示二进制目标文件的符号表，编译时需要加上<code>-g</code>选项</p>
-<pre><code class="shell">$nm a.out &gt; a.map
+<pre><code class="language-shell">$nm a.out &gt; a.map
 # T/t       代码段
 # D/d       数据段
 # B/b       bss 段
@@ -381,91 +399,64 @@ ELF Header:
 # 大写表示非静态  
 # 小写表示静态 static
 </code></pre>
-
 <h4 id="6-addr2line">6. addr2line</h4>
 <p>将地址转换成文件名和行号，给定了可执行程序中的地址或者重定向目标文件中的段的偏移地址，可以计算出相关的文件名字和行号</p>
-<pre><code class="shell">$addr2line -e test1 400506
+<pre><code class="language-shell">$addr2line -e test1 400506
 /home/hanfoo/code/test/addr2line/test1.c:5
 </code></pre>
-
 <h4 id="7-strip">7. strip</h4>
-<p>去掉文件调试信息，可以给可执行文件瘦身</p></div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
-        </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+<p>去掉文件调试信息，可以给可执行文件瘦身</p>
+              
             </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="btn btn-neutral float-right" title="网络编程">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="btn btn-neutral" title="链表"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
         </div>
-    </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
-    </body>
+</body>
 </html>

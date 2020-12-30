@@ -1,181 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>进程 - My Docs</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>进程 - My Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u8fdb\u7a0b";
+    var mkdocs_page_input_path = "linux\\\u8fdb\u7a0b\u4e0e\u7ebf\u7a0b.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
 
-    <body>
+<body class="wy-body-for-nav" role="document">
 
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
+  <div class="wy-grid-for-nav">
 
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">My Docs</a>
-                </div>
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> My Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
 
-                <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Welcome to MkDocs</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../c/c语言拾遗/">C语言拾遗</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
-</li>
-                                    
-<li >
-    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
-</li>
-                                    
-<li >
-    <a href="../../c_plusplus/readme/">Readme</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../">Linux_learn</a>
-</li>
-                                    
-<li >
-    <a href="../IO/">IO</a>
-</li>
-                                    
-<li >
-    <a href="../MakeFile/">MakeFile</a>
-</li>
-                                    
-<li >
-    <a href="../arm汇编/">ARM汇编</a>
-</li>
-                                    
-<li >
-    <a href="../cmake/">CMake</a>
-</li>
-                                    
-<li >
-    <a href="../link_list/">链表</a>
-</li>
-                                    
-<li >
-    <a href="../linux_shell/">Linux shell</a>
-</li>
-                                    
-<li >
-    <a href="../开发环境搭建/">开发环境搭建</a>
-</li>
-                                    
-<li >
-    <a href="../数据结构/">链表</a>
-</li>
-                                    
-<li >
-    <a href="../编译/">编译</a>
-</li>
-                                    
-<li >
-    <a href="../网络编程/">网络编程</a>
-</li>
-                                    
-<li class="active">
-    <a href="./">进程</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../python/readme/">Readme</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li >
-                                <a rel="next" href="../网络编程/">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../../python/readme/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#_1">进程</a></li>
-            <li><a href="#_2">进程基本</a></li>
-            <li><a href="#_11">进程间通信</a></li>
-        <li class="main "><a href="#_17">线程</a></li>
-            <li><a href="#_18">线程的创建</a></li>
-            <li><a href="#_19">线程的终止</a></li>
-            <li><a href="#_20">线程同步</a></li>
-            <li><a href="#_26">信号</a></li>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to MkDocs</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">C</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c/c%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/">C语言拾遗</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">C plusplus</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c_plusplus/cpp%E7%9F%A5%E8%AF%86%E7%82%B9/">Cpp知识点</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c_plusplus/qt%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86%E7%82%B9/">Qt入门知识点</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../c_plusplus/readme/">Readme</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Linux</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Linux_learn</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../IO/">IO</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../MakeFile/">MakeFile</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../arm%E6%B1%87%E7%BC%96/">ARM汇编</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../cmake/">CMake</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../link_list/">链表</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux_shell/">Linux shell</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">开发环境搭建</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">链表</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E7%BC%96%E8%AF%91/">编译</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">网络编程</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">进程</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">进程基本</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">四要素</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">进程终止</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">进程控制</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fork">函数fork</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#vfork">vfork</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exit">exit</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#waitwaitpid">wait和waitpid</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#exec">exec</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#system">system</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">进程关系</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_7">孤儿进程</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_8">僵尸进程</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_9">守护进程</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ps">ps命令</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_10">编程规则</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_11">进程间通信</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_12">管道</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_13">无名管道</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fifo">FIFO(有名管道)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_14">消息队列</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_15">信号量</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_16">共享内存</a>
+    </li>
+        </ul>
+    </li>
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Python</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../python/readme/">Readme</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
 
-<h1 id="_1">进程</h1>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">My Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Linux &raquo;</li>
+        
+      
+    
+    <li>进程</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">进程</h1>
 <h2 id="_2">进程基本</h2>
 <h3 id="_3">四要素</h3>
 <ol>
@@ -217,11 +235,10 @@
 <p>3个终止函数（<code>exit</code>,<code>_exit</code>,<code>_Exit</code>）将其<strong>退出状态</strong>作为参数传送给函数。在异常终止情况，内核产生一个指示异常终止原因的中止状态，父进程用<code>wait</code>和<code>waitpid</code>获取其状态</p>
 <h4 id="waitwaitpid">wait和waitpid</h4>
 <p>进程终止时，内核就像其父进程发送<code>SIGCHLD</code>信号，这是个异步事件，父进程可以选择忽略该信号，或者提供处理函数。</p>
-<pre><code class="c">#include &lt;sys/wait.h&gt;
+<pre><code class="language-c">#include &lt;sys/wait.h&gt;
 pid_t wait(int *static);
 pid_t wait_pid(pit_t pid, int *static, int options)
 </code></pre>
-
 <p>如果子进程已经终止，<code>wait</code>立即返回并取得子进程的状态，否则阻塞，直到子进程结束</p>
 <p><code>wait_pid</code>中的<code>pid</code>参数作用如下;</p>
 <ul>
@@ -254,7 +271,7 @@ pid_t wait_pid(pit_t pid, int *static, int options)
 </tbody>
 </table>
 <h4 id="exec">exec</h4>
-<pre><code class="c">#include &lt;unistd.h&gt;
+<pre><code class="language-c">#include &lt;unistd.h&gt;
 int execl(const char *pathname, const char * arg0, ... /* (char *) 0 */);
 int execv(const char *pathname, char *const argv[] );
 int execle(const char *pathname, const char * arg0, ...
@@ -264,7 +281,6 @@ int execlp(const char *filename, const char * arg0, ... /* (char *) 0 */);
 int execvp(const char *filename, char *const argv[] );
 六个函数返回：若出错则为- 1，若成功则不返回
 </code></pre>
-
 <h4 id="system">system</h4>
 <h3 id="_6">进程关系</h3>
 <h4 id="_7">孤儿进程</h4>
@@ -308,7 +324,7 @@ int execvp(const char *filename, char *const argv[] );
 <p>某些守护进程打开<code>/dev/null</code> 使其具有文件描述符0，1和2，这样任何一个视图读stdin，stdout和stderr的库例程都不会产生任何效果</p>
 </li>
 </ul>
-<pre><code class="c">#include &lt;syslog.h&gt;
+<pre><code class="language-c">#include &lt;syslog.h&gt;
 #include &lt;fcntl.h&gt;
 #include &lt;sys/resource.h&gt;
 void daemoize(const char *cmd)
@@ -361,7 +377,6 @@ void daemoize(const char *cmd)
 
 }
 </code></pre>
-
 <h2 id="_11">进程间通信</h2>
 <h3 id="_12">管道</h3>
 <h4 id="_13">无名管道</h4>
@@ -369,10 +384,9 @@ void daemoize(const char *cmd)
 <li>一般是半双工的</li>
 <li>只能在具有公共祖先的两个进程之间使用</li>
 </ol>
-<pre><code class="c">#include &lt;unistd.h&gt;
+<pre><code class="language-c">#include &lt;unistd.h&gt;
 int pipe(int fd[2]);
 </code></pre>
-
 <p><code>fd</code>但会两个文件描述符，<code>fd[0]</code>为读打开，<code>fd[1]</code>为写打开</p>
 <p>当管道的一端被关闭后，下列两条规则起作用</p>
 <ol>
@@ -381,12 +395,11 @@ int pipe(int fd[2]);
 </ol>
 <h4 id="fifo">FIFO(有名管道)</h4>
 <p>不相关的进程也能交换数据</p>
-<pre><code class="C">#include &lt;sys/stat.h&gt;
+<pre><code class="language-C">#include &lt;sys/stat.h&gt;
 int mkfifo(const char *path, mode_t mode);
 </code></pre>
-
 <h3 id="_14">消息队列</h3>
-<pre><code class="C">#include &lt;sys/msg.h&gt;
+<pre><code class="language-C">#include &lt;sys/msg.h&gt;
 int msgget(key_t key, int flag);
 
 /* cmd指定执行的命令
@@ -398,14 +411,12 @@ int msgctl(int msgpid, int cmd, struct msqid_ds *buf);
 int msgsnd(int msgid, const void * ptr, size_t nbytes, int flags);
 int msgrcv(int msgid, const void * ptr, size_t nbytes, long type, int flags);
 </code></pre>
-
 <p>消息队列发送中的<code>ptr</code> 指向结构体，</p>
-<pre><code class="c">struct mymsg {
+<pre><code class="language-c">struct mymsg {
     long type;
     char mtext[32];
 }
 </code></pre>
-
 <p><code>nbytes</code>长度为 <code>sizof(struct mymsg) - sizeof (long)</code>; 若<code>flag</code> 定义为<code>IPC_NOWAIT</code>则立即返回，不会阻塞。</p>
 <p>消息队列接收中的type使用如下；</p>
 <ul>
@@ -414,7 +425,7 @@ int msgrcv(int msgid, const void * ptr, size_t nbytes, long type, int flags);
 <li><code>type &lt; 0</code>:   返回队列中消息类型值小于<code>type</code>绝对值得消息，若有若干个，则取类型值最小的</li>
 </ul>
 <h3 id="_15">信号量</h3>
-<pre><code class="c">#include &lt;sys/sem.h&gt;
+<pre><code class="language-c">#include &lt;sys/sem.h&gt;
 int semget(key_t key, int mems, int flags);
 
 union semun {
@@ -431,7 +442,6 @@ struct sembuf{
 };
 int semop(int semid, struct sembuf semoparray[], size_t nops);
 </code></pre>
-
 <p><code>cmd</code> 参数指定了10中命令</p>
 <ul>
 <li>IPC_STAT对此集合取<code>semid_ds</code>结构，并存放在由<code>arg.buf</code>指向的结构中。</li>
@@ -453,7 +463,7 @@ int semop(int semid, struct sembuf semoparray[], size_t nops);
 <p><code>semop</code>中<code>sembuf</code>结构体中的<code>sme_op</code>为正，返回进程占用的资源，为负获取该资源。</p>
 <h3 id="_16">共享内存</h3>
 <p>共享存储允许两个或多个进程共享一定的存储区，信号量被用来实现共享存储的同步。</p>
-<pre><code class="c">#incldue &lt;sys/shm.h&gt;
+<pre><code class="language-c">#incldue &lt;sys/shm.h&gt;
 int shmget(key_t key, int size, int flag);
 
 /* cmd : IPC_STAT,IPC_SET,IPC_RAMID,SHM_LOCK, SHM_UNLOCK*/
@@ -464,16 +474,14 @@ void *shmat(int shmid, void addr, int flag);
 int shmdt(void addr);
 
 </code></pre>
-
 <h1 id="_17">线程</h1>
 <p>就像进程ID一样，每个线程也有一个ID，进程ID在整个系统是唯一的，但线程ID只有在它所属的进程上下文中有意义。</p>
 <h3 id="_18">线程的创建</h3>
-<pre><code class="c">#include &lt;pthread.h&gt;
+<pre><code class="language-c">#include &lt;pthread.h&gt;
 int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
                           void *(*start_routine) (void *), void *arg);
 /* 成功返回 0 */
 </code></pre>
-
 <h3 id="_19">线程的终止</h3>
 <p>如果进程中的任意线程调用了<code>exit</code>，<code>_exit</code>，<code>_Exit</code>那么整个进程就会终止。</p>
 <p>单个进程可以通过3种方式退出</p>
@@ -482,19 +490,17 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
 <li>线程可以被同一进程中的其他线程取消</li>
 <li>线程调用<code>pthread_exit</code></li>
 </ol>
-<pre><code class="c">void pthread_exit(void *rval_ptr);
+<pre><code class="language-c">void pthread_exit(void *rval_ptr);
 /* rval_ptr 是一个无类型的指针，与传给启动例程的单个参数类似，进程中的其他线程可以调用 pthread_join访问到这个指针 */
 int pthread_join(pthread_t thread, void ** rval_ptr)
 </code></pre>
-
 <p><code>pthread_join</code>一直阻塞，直到指定线程终止</p>
-<pre><code class="c">int pthread_cancel(pthread_t tid);
+<pre><code class="language-c">int pthread_cancel(pthread_t tid);
 /* 仅仅提出请求，线程可选择忽略 */
 </code></pre>
-
 <h3 id="_20">线程同步</h3>
 <h4 id="_21">互斥量</h4>
-<pre><code class="c">#include &lt;pthread.h&gt;
+<pre><code class="language-c">#include &lt;pthread.h&gt;
 int pthread_mutex_init(pthread_mutex_t *restrict mutex,
            const pthread_mutexattr_t *restrict attr);
 
@@ -509,7 +515,6 @@ int pthread_mutex_destroy(pthread_mutex_t *mutex);
 
 /* 成功返回 0 */
 </code></pre>
-
 <h5 id="_22">避免死锁</h5>
 <p>例如，程序使用一个以上的互斥锁，如果允许一个线程一直占有第一个互斥量，并在试图锁住第二个时处于阻塞，但是拥有第二个互斥量的线程也试图锁住第一个，于是产生死锁</p>
 <p>避免死锁发生</p>
@@ -520,7 +525,7 @@ int pthread_mutex_destroy(pthread_mutex_t *mutex);
 <h4 id="_23">带有超时的读写锁</h4>
 <h4 id="_24">条件变量</h4>
 <p>条件变量给多个线程提供了一个会合的场所，条件变量与互斥量一起使用时，允许线程以无竞争的方式等待特定的条件发生</p>
-<pre><code class="c">int pthread_cond_init(pthread_cond_t *restrict_cond, 
+<pre><code class="language-c">int pthread_cond_init(pthread_cond_t *restrict_cond, 
                       const pthread_condattr_t *restrict_attr);
 int pthread_cond_destroy(pthread_cond_t *cond);
 int pthread_cond_wait(pthread_cond_t *restrict_cond, pthread_mutex_t *restrict_cond);
@@ -528,7 +533,6 @@ int pthread_cond_timewait(pthread_cond_t *restrict_cond,
                           pthread_mutex_t *restrict_cond,
                           const struct timespec * restrict tsptr);
 </code></pre>
-
 <h4 id="_25">自旋锁</h4>
 <p>它与互斥量类似，但是不通过休眠使进程阻塞，而是获取锁之前一直处于忙等待阻塞状态，自旋锁用于：锁被持有的时间短，且线程不希望在重新调度上花费太多成本。</p>
 <h2 id="_26">信号</h2>
@@ -538,7 +542,7 @@ int pthread_cond_timewait(pthread_cond_t *restrict_cond,
 <li>捕捉信号。要通知内核在某种信号发生时，调用一个用户函数</li>
 <li>执行系统默认动作</li>
 </ol>
-<pre><code class="c">#include &lt;signal.h&gt;
+<pre><code class="language-c">#include &lt;signal.h&gt;
 typedef void (*sighandler_t)(int);
 
 sighandler_t signal(int signum, sighandler_t handler);
@@ -547,7 +551,6 @@ int kill(pid_t pid, int signo);
 /* 允许进程向自身发送信号 */
 int raise(int signo)
 </code></pre>
-
 <p><code>kill</code>的<code>pid</code>参数有以下4种情况</p>
 <ul>
 <li><code>pid &gt; 0</code>: 将信号发送给ID为<code>pid</code>的进程</li>
@@ -555,87 +558,62 @@ int raise(int signo)
 <li><code>pid &lt; 0</code>: 将信号发送给进程组ID等于<code>pid</code>绝对值</li>
 <li><code>pid == -1</code>: 将信号发送给发送进程有权限向他们发信号的所有进程</li>
 </ul>
-<pre><code class="c">unsigned int alarm(unsigned int seconds);
+<pre><code class="language-c">unsigned int alarm(unsigned int seconds);
 
 /* 使用调用进程挂起直至捕捉到一个信号 */
 int pause(void);
-</code></pre></div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
-        </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+</code></pre>
+              
             </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../python/readme/" class="btn btn-neutral float-right" title="Readme">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="btn btn-neutral" title="网络编程"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
         </div>
-    </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../python/readme/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
-    </body>
+</body>
 </html>
