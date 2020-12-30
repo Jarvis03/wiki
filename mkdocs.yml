@@ -1,2 +1,4 @@
-site_name: My Docs
-theme: readthedocs
+site_name: My Wiki
+
+theme:
+  name: 'material'

@@ -46,9 +46,9 @@ char a = ToChar(123);
 ```
 
 ##### 3. `#` 字符串化操作符
-> #表示字符串化操作符（stringification）。其作用是：将宏定义中的传入参数名转换成用一对双引号括起来参数名字符串。其只能用于有传入参数的宏定义中，且必须置于宏定义体中的参数名前。说白了，他是给x加双引号：
 
-> 
+> 表示字符串化操作符（stringification）。其作用是：将宏定义中的传入参数名转换成用一对双引号括起来参数名字符串。其只能用于有传入参数的宏定义中，且必须置于宏定义体中的参数名前。说白了，他是给x加双引号：
+>
 
 ```c
  char* str = ToString(123132);
@@ -102,39 +102,38 @@ eprintf ("success!\n")
 
 用户自定义类型来替代系统基本类型。
 
-> **typedef中声明的类型在变量名的位置出现**
+>  **typedef中声明的类型在变量名的位置出现**
+>
 
 ##### 1.  为数组定义类型
 
-  ```c
+```c
   typedef int INT_ARRAY_100[100];
   INT_ARRAY_100 arr;
-  ```
+```
 
 ##### 2. 为指针定义类型
 
 
-  ```c
+```c
   typedef char* PCHAR;
   PCHAR pa;
-  ```
+```
 
   **与宏定义的区别 **：
 
-  ```c
+```c
   #define MYCHAR char*
   MYCHAR a, b;// a是char*,b是char
   PCHAR c, d; // c和d都是 char*
-  ```
+```
 
 ##### 3. 陷阱
 
-
-
-- ```c
+```c
   typedef char* PCHAR;
   int strcmp(const PCHAR,const PCHAR);
-  ```
+```
 
 在上面的代码中，`const PCHAR` 是否相当于`const char*` 呢？
 
@@ -147,12 +146,12 @@ int strcmp(PCHAR， PCHAR);
 
  其实，无论什么时候，只要为指针声明 typedef，那么就应该在最终的 typedef 名称中加一个 const，以使得该指针本身是常量。
 
-- 
+
    还需要特别注意的是，虽然 `typedef` 并不真正影响对象的存储特性，但在语法上它还是一个存储类的关键字，就像 `auto`、`extern`、`static` 和 `register` 等关键字一样。因此，像下面这种声明方式是不可行的：
 
-  ```c
+```c
   typedef static int INT_STATIC;
-  ```
+```
 
 ### 数组
 
@@ -174,9 +173,6 @@ int array[5];
 array <=> &array[0]; //都是首元素地址 类型为 int*
 &array      //类型指向 int [5]的指针类型，数组指针
 ```
-
-
-
 ### switch
 
 switch 类型不能是 `float`,`double`,`bool`
@@ -191,5 +187,5 @@ switch 类型不能是 `float`,`double`,`bool`
 
 ### 逗号运算符
 
-### {}作用域
+### {} 作用域
 
