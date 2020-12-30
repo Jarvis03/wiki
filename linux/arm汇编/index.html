@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>ARM汇编 - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c/c语言拾遗/">C语言拾遗</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../">Linux_learn</a>
+</li>
+                                    
+<li >
+    <a href="../IO/">IO</a>
+</li>
+                                    
+<li >
+    <a href="../MakeFile/">MakeFile</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">ARM汇编</a>
+</li>
+                                    
+<li >
+    <a href="../cmake/">CMake</a>
+</li>
+                                    
+<li >
+    <a href="../link_list/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../linux_shell/">Linux shell</a>
+</li>
+                                    
+<li >
+    <a href="../开发环境搭建/">开发环境搭建</a>
+</li>
+                                    
+<li >
+    <a href="../数据结构/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../编译/">编译</a>
+</li>
+                                    
+<li >
+    <a href="../网络编程/">网络编程</a>
+</li>
+                                    
+<li >
+    <a href="../进程与线程/">进程</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../MakeFile/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../cmake/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#arm">ARM汇编</a></li>
+            <li><a href="#arm_1">ARM处理器的工作模式</a></li>
+            <li><a href="#_1">寄存器</a></li>
+            <li><a href="#arm_2">ARM指令</a></li>
+            <li><a href="#_5">汇编程序设计</a></li>
+            <li><a href="#arm_5">ARM编译器命令格式</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="arm">ARM汇编</h1>
+<h2 id="arm_1">ARM处理器的工作模式</h2>
+<p>模式说明:</p>
+<ul>
+<li>User  : 非特权模式，大部分任务执行在这种模式</li>
+<li>FIQ       : 当一个高优先级（fast) 中断产生时将会进入这种模式</li>
+<li>IRQ       : 当一个低优先级（normal) 中断产生时将会进入这种模式</li>
+<li>Supervisor    : 当复位或软中断指令执行时将会进入这种模式</li>
+<li>Abort : 当存取异常时将会进入这种模式</li>
+<li>Undef : 当执行未定义指令时会进入这种模式</li>
+<li>System    : 使用和User模式相同寄存器集的特权模式</li>
+<li>Monitor   : 是为了安全而扩展出的用于执行安全监控代码的模式(Cortex多出来此模式)</li>
+</ul>
+<h2 id="_1">寄存器</h2>
+<ol>
+<li>
+<p><code>R13 (the stack pointer register)</code>  常作为栈指针寄存器，用来保存栈存储空间首地址。每种 异常模式拥有自己的<code>R13</code>作为栈指针</p>
+</li>
+<li>
+<p><code>R14 (the linker register)</code>链接寄存器，保存函数的返回地址值。在<code>ARM</code>体系中具有下面两种特殊作用。</p>
+</li>
+<li>
+<p>每一种处理器模式自己的物理<code>R14</code>中存放当前子程序的返回地址。当通过<code>BL</code>或者<code>BLX</code>指令调用子程序是，<code>R14</code>被设置为子程序的返回地址。在子程序中，当把<code>R14</code>的值赋值到程序计数器<code>PC</code>中时，子程序返回。可以通过以下两种方式实现</p>
+</li>
+<li>
+<p>执行下马任何一条指令：</p>
+<p><code>assembly
+ MOV PC,LR
+ BX  LR</code></p>
+</li>
+<li>
+<p>在子程序入口使用下面指令将PC保存到栈中：</p>
+<p><code>assembly
+  STMFD SP! , {&lt;register&gt;, LR}
+  /*下面指令可以实现子程序返回*/
+  LDMFD SP!, {&lt;REGISTER, PC&gt;}</code></p>
+</li>
+<li>
+<p>当异常中断发生时，该异常模式特定的物理<code>R14</code> 被设置成该异常模式将要返回的地址，对于有些异常模式， <code>R14</code>的值可能与将返回的地址有一个常数的偏移量</p>
+</li>
+</ol>
+<p>​      <strong>NOTE：R14寄存器也可以作为通用寄存器使用 </strong></p>
+<ol>
+<li>
+<p><code>R15 (the current program counter register)</code> 当前程序计数寄存器，保存当前取指指令的地址值</p>
+</li>
+<li>
+<p><code>cpsr (the current program status register)</code> 当前程序状态寄存器，</p>
+</li>
+</ol>
+<pre><code>N[31]: 如果程序运算结果为负数，N[31] 置1否则 清0
+Z[30]: 如果结果为0 的话, Z位 被置1 否则 清0
+C[29]: 如果运行加法指令 加完的结果用32位没办法表示（溢出了）C 置1  否则  清0
+        如果是减法运算产生借位，C位 清0   没有产生借位， C位 置1
+V[28]: 符号位发生变化， 那么 V位置1，否则清零
+I[7]: 是否禁止 IRQ 中断源
+F[6]: 是否禁止 FIQ 中断源
+T[5]: 置1， CPU处于 Thumb 状态 清0， CPU处于 ARM 状态
+M[4:0]: 模式位， 2^5 , 只用了8个
+    10000  User mode;
+    10001  FIQ mode; 
+    10011  SVC mode;
+    10111  Abort mode; 
+    11011  Undfined mode; 
+    11111  System mode; 
+    10110  Monitor mode; 
+    10010  IRQ;
+</code></pre>
+
+<ol>
+<li>SPSR： 保存程序状态寄存器  (the save progrem status register) 用来保存 CPSR 值</li>
+</ol>
+<h2 id="arm_2">ARM指令</h2>
+<h3 id="_2">分类</h3>
+<p>ARM指令集分为跳转指令，数据处理指令，程序状态寄存器传输指令、Load/Store指令、协处理器指令和异常中断指令</p>
+<h3 id="_3">指令的一般编码格式</h3>
+<p>语法格式如 <code>&lt;opcode&gt;{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;,&lt;shifter_operand&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th align="left">31 - 28</th>
+<th>27 - 25</th>
+<th>24- 21</th>
+<th>20</th>
+<th>19-16</th>
+<th>15-12</th>
+<th>11  -  0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">cond</td>
+<td>001</td>
+<td>opcode</td>
+<td>S</td>
+<td>Rn</td>
+<td>Rd</td>
+<td>shifter_operand</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>opcode</code>: 指令操作符编码</li>
+<li><code>cond</code>:  指令执行的条件编码</li>
+<li><code>S</code> : 决定指令的操作是否影响CPSR的值</li>
+<li><code>Rd</code>: 目标寄存器编码</li>
+<li><code>Rn</code>: 包含第一个操作数的寄存器编码</li>
+<li><code>shifter_operand</code>:表示第二个操作数</li>
+</ul>
+<h4 id="arm_3">ARM指令的条件码域</h4>
+<table>
+<thead>
+<tr>
+<th>条件码</th>
+<th>助记符</th>
+<th>含义</th>
+<th>CPSR中条件标志</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0000</td>
+<td>EQ</td>
+<td>相等</td>
+<td>Z=1</td>
+</tr>
+<tr>
+<td>0001</td>
+<td>NE</td>
+<td>不相等</td>
+<td>Z=0</td>
+</tr>
+<tr>
+<td>0010</td>
+<td>CS/HS</td>
+<td>无符号数大于等于</td>
+<td>C=1</td>
+</tr>
+<tr>
+<td>0011</td>
+<td>CC/LO</td>
+<td>无符号数小于</td>
+<td>C=0</td>
+</tr>
+<tr>
+<td>0100</td>
+<td>MI</td>
+<td>负数</td>
+<td>N=1</td>
+</tr>
+<tr>
+<td>0101</td>
+<td>PL</td>
+<td>非负数</td>
+<td>N=0</td>
+</tr>
+<tr>
+<td>0110</td>
+<td>VS</td>
+<td>上溢出</td>
+<td>V=1</td>
+</tr>
+<tr>
+<td>0111</td>
+<td>VC</td>
+<td>没有上溢出</td>
+<td>V=0</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>HI</td>
+<td>无符号数大于</td>
+<td>C=1且Z=0</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>LS</td>
+<td>无符号数小于等于</td>
+<td>C=0或Z=1</td>
+</tr>
+<tr>
+<td>1010</td>
+<td>GE</td>
+<td>带符号数大于等于</td>
+<td>N=1且V=1或<br />N=0且V=0</td>
+</tr>
+<tr>
+<td>1011</td>
+<td>LT</td>
+<td>带符号数小于</td>
+<td>N=1且V=0或<br />N=0且V=1</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>GT</td>
+<td>带符号数大于</td>
+<td>Z=0且N=V</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>LE</td>
+<td>带符号数小于等于</td>
+<td>Z=1且N!=V</td>
+</tr>
+<tr>
+<td>1110</td>
+<td>AL</td>
+<td>无条件执行</td>
+<td></td>
+</tr>
+<tr>
+<td>1111</td>
+<td>NV</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm_4">ARM指令的寻址方式</h3>
+<ul>
+<li>数据处理指令的操作数寻址方式</li>
+<li>字及无符号字节的<code>Load/Store</code>指令的寻址方式</li>
+<li>杂类<code>Load/Store</code>指令的寻址方式</li>
+<li>批量<code>Load/Store</code>指令的寻址方式</li>
+<li>协处理器<code>Load/Store</code>指令的寻址方式</li>
+</ul>
+<h4 id="1">1. 数据处理指令的操作数寻址方式</h4>
+<p><code>&lt;shifter_operand&gt;</code>通常有下面3中格式：</p>
+<ol>
+<li>立即数方式。</li>
+</ol>
+<p>每个立即数由一个8位常数循环右移偶数位得到，其中循环友谊的位数有一个4位二进制的两倍表示，如果立即数记做<code>&lt;immediate&gt;</code>，8位常数记做<code>immed_8</code>，4位循环右移值记作 <code>rotate_imm</code></p>
+<p><code>&lt;immediate&gt; = immed 循环右移（2 * rotate_imm）</code></p>
+<ol>
+<li>寄存器方式 。</li>
+</ol>
+<p>在寄存器寻址方式下，操作数即为寄存器的数值，如下：</p>
+<p><code>assembly
+   MOV R3, R2
+   ADD R0, R1, R2</code></p>
+<ol>
+<li>寄存器移位方式</li>
+</ol>
+<p>寄存器移位方式的操作数为寄存器的数值做相应的移位而得到，具体的移位方式有下面几种：</p>
+<ul>
+<li><code>ASR</code>：算数右移</li>
+<li><code>LSL</code>：逻辑左移</li>
+<li><code>LSR</code>：逻辑右移</li>
+<li><code>ROR</code>：循环右移</li>
+<li><code>RRX</code>：扩展的循环右移</li>
+</ul>
+<h4 id="2-loadstore">2. 字及无符号字节的<code>Load/Store</code>指令的寻址方式</h4>
+<h4 id="3-loadstore">3. 杂类<code>Load/Store</code>指令的寻址方式</h4>
+<p>这里说的杂类<code>Load/Store</code>指令包括：操作数为半字（无符号或者带符号数）数据；操作数为带符号的字节数据；双字；</p>
+<h4 id="4-loadstore">4.  批量<code>Load/Store</code>指令的寻址方式</h4>
+<h4 id="5-loadstore">5. 协处理器<code>Load/Store</code>指令的寻址方式</h4>
+<h3 id="_4">指令集</h3>
+<h4 id="1_1">1. 跳转指令</h4>
+<p>ARM中有两种方式可以实现程序跳转：一种是跳转指令；另一种是直接向PC寄存器写入目标值</p>
+<h5 id="bbl">B和BL:跳转指令</h5>
+<p>两者均可以跳转到指令中的目标地址，不同之处是<code>BL</code>同时还将<code>PC</code>寄存器的值保存到<code>LR</code>寄存器中</p>
+<p>语法格式：</p>
+<blockquote>
+<p><code>B{L}{&lt;cond&gt;}   &lt;targer_address&gt;</code></p>
+</blockquote>
+<p>指令的使用：</p>
+<p>BL指令用于实现子程序的调用（如<code>BL  lable</code>）。子程序的返回可以通过将LR寄存器的值复制到PC寄存器</p>
+<ul>
+<li><code>BX R14</code></li>
+<li><code>MOV PC , R14</code></li>
+<li>当子程序入口调用了 <code>STMFD R13! , {&lt;register&gt;, R14}</code>, 返回可以用<code>LDMFD R13!, {&lt;register&gt;,PC}</code></li>
+</ul>
+<h5 id="blx">BLX</h5>
+<p>跳转到目标地址，并将程序状态切换为<code>Thumb</code>状态</p>
+<blockquote>
+<p>BLX  <target_address> </p>
+</blockquote>
+<h4 id="2">2. 数据处理指令</h4>
+<p>大致分3类：数据传送，算数逻辑运算，比较指令</p>
+<p><strong>数据传送指令</strong>用于向寄存器传入一个常数，该指令包括一个目标寄存器和一个源操作数</p>
+<p><strong>算数逻辑运算</strong>包括一个目标寄存器和两个源操作数，该指令将运算结果存入目标寄存器，同时更新<code>CPSR</code>中相应的条件标志位</p>
+<p><strong>比较指令</strong>不保存运算结果，只更新<code>CPSR</code>中相应的条件位</p>
+<h5 id="mov">MOV ：数据传送</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据传送到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<table>
+<thead>
+<tr>
+<th align="left">31 - 28</th>
+<th>27 - 25</th>
+<th>24- 21</th>
+<th>20</th>
+<th>19-16</th>
+<th>15-12</th>
+<th>11  -  0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">cond</td>
+<td>001</td>
+<td>1101</td>
+<td>S</td>
+<td>应为0</td>
+<td>Rd</td>
+<td>shifter_operand</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>MOV {<cond>} {S} <Rd>, <shifter_operand></p>
+</blockquote>
+<h5 id="mvn">MVN</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据的反码传送到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>格式同MOV</p>
+</blockquote>
+<h5 id="add">ADD : 加法指令</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据与寄存器<code>&lt;Rn&gt;</code>的值相加，把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<table>
+<thead>
+<tr>
+<th align="left">31 - 28</th>
+<th>27 - 25</th>
+<th>24- 21</th>
+<th>20</th>
+<th>19-16</th>
+<th>15-12</th>
+<th>11  -  0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">cond</td>
+<td>001</td>
+<td>0100</td>
+<td>S</td>
+<td>Rn</td>
+<td>Rd</td>
+<td>shifter_operand</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ADD {<cond>} {S} <Rd>, <Rn>, <shifter_operand></p>
+</blockquote>
+<p><strong>典型用法：</strong></p>
+<pre><code class="assembly">add rx, rx, #1
+add rd, rx,rx ,lsl #n
+add rs, pc, #offset
+</code></pre>
+
+<h5 id="adc">ADC ： 带进位的加法指令</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据与寄存器<code>&lt;Rn&gt;</code>的值相加，在加上<code>CPSR</code>中的C条件标志为的值。把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>格式同 ADD</p>
+</blockquote>
+<p>实现64位数相加：</p>
+<pre><code class="assembly">adds r4, r0, r2 @r0,r1分别为高32位和低32位
+ADC  r5, r1, r3
+</code></pre>
+
+<h5 id="sub">SUB ：减法指令</h5>
+<p>从<code>&lt;Rn&gt;</code>中减去<code>&lt;shifter_opperand&gt;</code>表示的数据，把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>SUB {<cond>} {S} <Rd>, <Rn>, <shifter_operand></p>
+</blockquote>
+<pre><code class="assembly">SUB Rx， Rx， #1 @Rx = Rx - 1 
+</code></pre>
+
+<h5 id="sbc">SBC ：带位减法指令</h5>
+<p>从<code>&lt;Rn&gt;</code>中减去<code>&lt;shifter_opperand&gt;</code>表示的数据，再减去<code>CPRS</code>中C条件标志位的反码，把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>格式同SUB</p>
+</blockquote>
+<h5 id="rsb">RSB ： 逆向减法</h5>
+<p>从<code>&lt;shifter_opperand&gt;</code>表示的数据中减去<code>&lt;Rn&gt;</code>，把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<h5 id="rcs">RCS ： 带位逆向减法</h5>
+<p>从<code>&lt;shifter_opperand&gt;</code>表示的数据中减去<code>&lt;Rn&gt;</code>，再减去<code>CPRS</code>中C条件标志位的反码,把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<h5 id="and">AND ： 逻辑与</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据与寄存器<code>&lt;Rn&gt;</code>的值按位作逻辑与操作，,把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>AND {<cond>} {S} <Rd>， <Rn> , <shifter_operand></p>
+</blockquote>
+<h5 id="orr">ORR ：逻辑或</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据与寄存器<code>&lt;Rn&gt;</code>的值按位作逻辑或操作，,把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>ORR {<cond>} {S} <Rd>， <Rn> , <shifter_operand></p>
+</blockquote>
+<pre><code class="assembly">ORR R3, R0, R3, LSL #8  @ R3中的数据左移8位，ORR操作将R0的低8位数据获取到
+</code></pre>
+
+<h5 id="eor">EOR ：逻辑异或</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据与寄存器<code>&lt;Rn&gt;</code>的值按位作逻辑异或操作，,把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>EOR {<cond>} {S} <Rd>， <Rn> , <shifter_operand></p>
+</blockquote>
+<h5 id="bic">BIC ： 位清除指令</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据与寄存器<code>&lt;Rn&gt;</code>的值的反码，按位作逻辑与操作，,把结果保存到目标寄存器<code>&lt;Rd&gt;</code>中，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>BIC {<cond>} {S} <Rd>， <Rn> , <shifter_operand></p>
+</blockquote>
+<h5 id="cmp">CMP ：比较指令</h5>
+<p>将寄存器<code>&lt;Rn&gt;</code>的值减去<code>&lt;shifter_opperand&gt;</code>表示的数值，根据操作数的结果更新<code>CPSR</code>中的条件标志位，后面的指令就可以根据<code>CPSR</code>中相应的条件标志位来判断是否执行</p>
+<blockquote>
+<p>CMP {<cond>} <Rn>, <shifter_oprand></p>
+</blockquote>
+<p><code>CMP</code>与<code>SUBS</code>的区别在于<code>CMP</code>指令不保存操作结果</p>
+<h5 id="cmn">CMN ： 基于相反数的比较指令</h5>
+<p>将寄存器<code>&lt;Rn&gt;</code>的值加上<code>&lt;shifter_opperand&gt;</code>表示的数值，根据操作数的结果更新<code>CPSR</code>中的条件标志位，后面的指令就可以根据<code>CPSR</code>中相应的条件标志位来判断是否执行</p>
+<blockquote>
+<p>CMN {<cond>} <Rn>, <shifter_oprand></p>
+</blockquote>
+<h5 id="tst">TST ： 测试指令</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据与寄存器<code>&lt;Rn&gt;</code>的值按位作逻辑与操作，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>TST {<cond>} <Rn>, <shifter_operand></p>
+</blockquote>
+<h5 id="tsq">TSQ ： 相等测试指令</h5>
+<p>将<code>&lt;shifter_opperand&gt;</code>表示的数据与寄存器<code>&lt;Rn&gt;</code>的值按位作逻辑异或操作，并根据操作数的结果更新<code>CPSR</code>中的条件标志位</p>
+<blockquote>
+<p>TEQ {<cond>} <Rn>, <shifter_operand></p>
+</blockquote>
+<h4 id="3">3. 乘法指令</h4>
+<h5 id="mul-32">MUL : 32位乘法指令</h5>
+<p>实现两个32位数（有或无符号）的乘积，并将结果存放到一个32位寄存器中，同时根据运算结果设置<code>CPSR</code>寄存器中相应的条件标志位。<strong>考虑指令执行的效率，指令中所有的操作数都放在寄存器中</strong></p>
+<blockquote>
+<p>MUL {<cond>}, {S}, <Rd>, <Rm>, <Rs></p>
+</blockquote>
+<pre><code class="assembly">MUL R0, R1, R2  @ R0 = R1 * R2
+</code></pre>
+
+<h5 id="mla-32">MLA ：32位带加数的乘法</h5>
+<p>实现两个32位数（有或无符号）的乘积，再将乘积加上第三个数，并将结果存放到一个32位寄存器中，同时根据运算结果设置<code>CPSR</code>寄存器中相应的条件标志位。<strong>考虑指令执行的效率，指令中所有的操作数都放在寄存器中</strong></p>
+<blockquote>
+<p>MLA  {<cond>}, {S}, <Rd>, <Rm>, <Rs>，<Rn></p>
+</blockquote>
+<pre><code class="assembly">MUL R0, R1, R2, R3  @ R0 = R1 * R2 + R3
+</code></pre>
+
+<h5 id="smull-64">SMULL： 64位有符号数乘法指令</h5>
+<h5 id="smlal-64">SMLAL ：64位带加数的有符号乘法指令</h5>
+<h5 id="umull-64">UMULL ：64位无符号乘法指令</h5>
+<h5 id="umlal-64">UMLAL ：64位带加数的无符号乘法指令</h5>
+<h4 id="4">4. 杂类的算数指令</h4>
+<ul>
+<li>CLZ : 前导0个数计数指令</li>
+</ul>
+<p>计算寄存器中操作数最高端0个数</p>
+<blockquote>
+<p>CLZ {<cond>} <Rd>, <Rm></p>
+</blockquote>
+<h4 id="5">5. 状态寄存器的访问指令</h4>
+<h5 id="mrs">MRS ：状态寄存器到通用寄存器的传送指令</h5>
+<blockquote>
+<p>MRS {<cond>}, <Rd>, CPSR</p>
+<p>MRS {<cond>}, <Rd>, SPSR</p>
+</blockquote>
+<p><strong>指令的使用：</strong></p>
+<p>主要用于以下3种场合：</p>
+<ol>
+<li>
+<p>通常通过<code>读取 - 修改 - 写回</code>操作序列修改状态寄存器的内容，<code>MRS</code>用于读取</p>
+</li>
+<li>
+<p>当异常中断允许嵌套时，需要进入异常中断之后，嵌套中断发生之前保存当前处理器模式对应的<code>SPSR</code></p>
+</li>
+<li>
+<p>在进程切换时也需要保存当前状态寄存器值</p>
+</li>
+</ol>
+<h5 id="msr">MSR ：通用寄存器到状态寄存器的传送指令</h5>
+<blockquote>
+<p>MRS {<cond>},  CPSR_<fileds>, #<immediate></p>
+<p>MRS {<cond>},  CPSR_<fileds>, <Rm></p>
+</blockquote>
+<pre><code class="assembly">MSR CPSR_c, R0 @仅仅修改控制位域
+MSR CPSR，R1
+</code></pre>
+
+<h4 id="6-loadstore">6. Load/Store内存访问指令</h4>
+<h5 id="ldr">LDR ： 字数据读取指令</h5>
+<p>从内存将一个32位的字读取到指令中的目标寄存器中，如果指令中的寻址方式确定的地址不是字对齐，则从内存独处的数据要进行循环右移操作，移位的位数为寻址方式确定地址的bit[1:0]的8倍</p>
+<blockquote>
+<p>LDR {<cond>}, <Rd> , <adressing_mode></p>
+</blockquote>
+<p><strong>指令的使用</strong></p>
+<ul>
+<li>用于从内存读取32位字数据到通用寄存器，然后在该寄存器对数据进行一定操作</li>
+<li>当PC作为指令中的目标寄存器时，可以实现程序跳转</li>
+</ul>
+<pre><code class="assembly">LDR R0, [R1, #4] @内存单元R1+4中的字读取到R0寄存器
+LDR R0, [R1, R2] @内存单元R1+R2中的字读取到R0寄存器
+LDR R0, [R1], #4 @内存单元R1中的字读取到R0寄存器,然后R1=R1+4
+LDR R0, [R1], R2 @内内存单元R1中的字读取到R0寄存器,然后R1=R1+R2
+</code></pre>
+
+<h5 id="ldrb">LDRB ：字节数据读取指令</h5>
+<h5 id="ldrh">LDRH ： 半字数据读取指令</h5>
+<h5 id="ldrsb">LDRSB ： 有符号的字节数据读取指令</h5>
+<h5 id="ldrsh">LDRSH ： 有符号的半字数据读取指令</h5>
+<h5 id="ldrt">LDRT ： 用户模式的字数据读取指令</h5>
+<h5 id="ldrbt">LDRBT ： 用户模式的字节数据读取指令</h5>
+<h5 id="str">STR ： 字数据写入指令</h5>
+<p>从内存将一个32位的字写入到指定的内存单元</p>
+<blockquote>
+<p>STR {<cond>}, <Rd> , <adressing_mode></p>
+</blockquote>
+<pre><code class="assembly">STR R0, [R1, #0X100] @将R0中的字数据写入到内存单元（R1 + 0X100)中
+STR R0, [R1], #8   @将R0中的字数据写入到内存单元（R1）中，R1=R1+8
+</code></pre>
+
+<h5 id="strb">STRB ： 字节数据写入指令</h5>
+<h5 id="strh">STRH ：半字数据写入指令</h5>
+<h5 id="strbt">STRBT ： 用户模式字数据写入指令</h5>
+<h5 id="strt">STRT ： 用户模式字数据写入指令</h5>
+<h4 id="7-loadstore">7. 批量Load/Store内存访问指令</h4>
+<h5 id="ldm1">LDM(1)：批量内存字数据读取</h5>
+<blockquote>
+<p>LDM {<cond>} <addressing_mode> <Rn>{!} , <register></p>
+</blockquote>
+<pre><code class="assembly">ldr r0, =0x40000000 @伪指令
+LDM r0, {r1,r2,r3}
+</code></pre>
+
+<h5 id="ldm2">LDM(2) ：带状态寄存器的</h5>
+<blockquote>
+<p>LDM {<cond>} <addressing_mode> <Rn>{!} , <register>^</p>
+</blockquote>
+<h5 id="stm">STM：批量内存字数据批量写入指令</h5>
+<blockquote>
+<p>STM {<cond>} <addressing_mode> <Rn>! , <register></p>
+</blockquote>
+<h4 id="8">8. 信号量操作指令</h4>
+<h5 id="swp">SWP ：交换指令</h5>
+<blockquote>
+<p>SWP {<cond>} <Rd>, <Rm>, [<Rn>]</p>
+</blockquote>
+<pre><code class="assembly">swp r1, r2, [r3] @r3读到r1中，同时r2写入r3中
+swp r1, r1, [r2] @r1与r2互换 
+</code></pre>
+
+<h5 id="swpb">SWPB：字节交换指令</h5>
+<h4 id="9">9. 异常中断产生指令</h4>
+<h5 id="swi">SWI：软中断指令</h5>
+<p>用于产生SWI异常中断，ARM通过这种机制实现用户模式对系统中特权模式的程序调用</p>
+<blockquote>
+<p>SWI {<cond>}  <immed_24></p>
+</blockquote>
+<p><strong>指令的使用：</strong></p>
+<ul>
+<li>指令中24位立即数制定了用户请求的服务类型，参数是通过通用寄存器传递</li>
+<li>指令的24位立即数被忽略，用户请求的服务类型由寄存器R0数值决定，参数通过其他通用寄存器传递</li>
+</ul>
+<p>SWI指令由系统完成以下工作</p>
+<pre><code class="assembly">R14_svc = SWI指令的下面一套指令的地址
+SPSR_svc = CPSR     //保存当前的CPSR
+CPSR[4:0] = 0b10011 //使处理器切换到特权模式
+CPSR[5] = 0         // 使用程序进入ARM状态
+CPSR[7] = 1         // 禁止正常中断响应
+                    //程序跳转到相应的中断向量处
+if high vectors configured then 
+PC = 0xffff0008 
+else
+pc= 0x00000008
+</code></pre>
+
+<h5 id="bkpt">BKPT ：断点中断指令</h5>
+<h4 id="10">10. 协处理指令</h4>
+<p>协处理器指令包括以下3类：</p>
+<ul>
+<li>用于ARM处理器初始化ARM协处理器的数据出处操作</li>
+<li>用于ARM处理器的寄存器和ARM协处理器的寄存器间的数据传送操作</li>
+<li>用于ARM协处理器的寄存器和内存单元之间传送数据</li>
+</ul>
+<p>这些指令包括以下5条：</p>
+<ul>
+<li>CDP  协处理数据操作 </li>
+<li>LDC  协处理数据读取</li>
+<li>STC   协处理器数据写入</li>
+<li>MCR ARM寄存器到协处理器寄存器的数据传送</li>
+<li>MRC 协处理器寄存器到ARM寄存器的数据传送</li>
+</ul>
+<h2 id="_5">汇编程序设计</h2>
+<h3 id="_6">伪操作</h3>
+<h4 id="1_2">1. 符号定义伪操作</h4>
+<ul>
+<li>
+<p>GBLA, GBLL &amp; GBLS ：声明全局变量</p>
+</li>
+<li>
+<p>LCLA，LCLL &amp; LCLS ： 声明局部变量</p>
+</li>
+<li>
+<p>SETA，SETL &amp; SETS ：给变量赋值</p>
+</li>
+<li>
+<p>RLIST ：为通用寄存器列表定义名称</p>
+</li>
+<li>
+<p>CN      ：为协处理器的寄存器定义名称</p>
+</li>
+<li>
+<p>CP       ： 为协处理器定义名称</p>
+</li>
+<li>
+<p>DN &amp; SN ：为VFP的寄存器定义名称</p>
+</li>
+<li>
+<p>FN      ：为FPA的浮点寄存器定义名称</p>
+</li>
+</ul>
+<h4 id="2_1">2. 数据定义伪操作</h4>
+<ul>
+<li>LTORG ：声明一个数据缓冲池的开始</li>
+<li>MAP ：定义一个结构化的内存表的首地址</li>
+<li>FIELD ：定义结构化的内存表中的一个数据域</li>
+<li>SPACE ：分配一块内存单元</li>
+<li>DCB ： 分配一段字节的内存单元，并指定数据初始化</li>
+<li>DCD &amp; DCDU ：分配一段字的内存单元，并用定数据初始化</li>
+<li>DCDO ： 分配一段字的内存单元，并将每个单元的内容初始化成该单元相对于静态基值寄存器的偏移量</li>
+<li>DCFD &amp; DCFDU：分配一段双字内存单元，并用双精度浮点数据初始化</li>
+<li>DCFS &amp; DCFSU ： 分配一段字的内存单元，并用单精度数据初始化</li>
+<li>DCI ：分配一段字节的内存单元，用指定数据初始化，指定内存单元中存放的时代码不是数据</li>
+<li>DCQ &amp; DCQU ： 分配一段半字内存单元，并用64位整数初始化</li>
+<li>DCW &amp; DCWU ：分配一段半字的内存单元 ，并用指令数据初始化</li>
+<li>DATA ：在代码中使用数据，现在已经不再使用</li>
+</ul>
+<h4 id="3_1">3. 汇编控制伪操作</h4>
+<ul>
+<li>IF, ELSE &amp; ENDIF</li>
+<li>WHILE &amp; WEND</li>
+<li>MACRO &amp; MEND</li>
+<li>MEXIT</li>
+</ul>
+<h4 id="4_1">4. 架构描述伪操作</h4>
+<h4 id="5_1">5. 信息报告伪操作</h4>
+<ul>
+<li>ASSERT</li>
+<li>INFO</li>
+<li>OPT</li>
+<li>TTL &amp; SUBT</li>
+</ul>
+<h4 id="6">6. 其他伪操作</h4>
+<ul>
+<li>ALIGN</li>
+<li>AREA</li>
+<li>CODE16 &amp; CODE32</li>
+<li>END </li>
+<li>ENTRY</li>
+<li>EQU</li>
+<li>EXPORT or GLOBAL</li>
+</ul>
+<h3 id="_7">伪指令</h3>
+<h5 id="1-adr">1. ADR(小范围的地址读取伪指令)</h5>
+<p>该指令基于PC值或者基于及寄存器地址值读取到寄存器中，编译器会用一个ADD或者SUB指令来实现该指令。</p>
+<blockquote>
+<p>ADR {cond} register , expr</p>
+</blockquote>
+<pre><code class="assembly">start MOV r0 , #10;  // pc值位当前指令地址加8字节
+ADR r4, start;       // 被编译器替换为SUB r4, pc , #0xc
+</code></pre>
+
+<h5 id="2-adrl">2. ADRL(中等范围地址读取伪指令)</h5>
+<p>该指令基于PC值或者基于及寄存器地址值读取到寄存器中，比ADR可以读取更大范围地址。编译器替换成两条指令</p>
+<blockquote>
+<p>ADRL {cond} register , expr</p>
+</blockquote>
+<h5 id="3-ldr">3. LDR 大范围地址读取伪指令</h5>
+<p>将一个32位常数或者一个地址读取到寄存器中</p>
+<blockquote>
+<p>LDR {cond} register, =[expr] [label-expr]</p>
+</blockquote>
+<p><code>expr</code> 为32位常量</p>
+<ul>
+<li>当<code>expr</code>表示的地址没有超过<code>mov</code>或<code>mvn</code>指令的地址取值范围，编译器会用<code>mov</code>或者<code>mvn</code>代替</li>
+<li>当<code>expr</code>表示的地址超过<code>mov</code>或<code>mvn</code>指令的地址取值范围，编辑器将该常数放在数据缓冲区，同时用一条基于<code>PC</code>的<code>LDR</code>指令读取该常数</li>
+</ul>
+<pre><code class="assembly">ldr r1, =0xff5678;
+</code></pre>
+
+<h5 id="4-nop">4. NOP 空操作伪指令</h5>
+<p>该伪指令在汇编时被替换成ARM空操作</p>
+<h3 id="_8">语句格式</h3>
+<h3 id="_9">程序格式</h3>
+<h3 id="_10">汇编实例</h3>
+<h5 id="1_3">1. 子程序跳转</h5>
+<h2 id="arm_5">ARM编译器命令格式</h2>
+<p>编译器命令格式如下</p>
+<pre><code>complier [PCS-options] [source-language] [search-paths] [preprocessor-options] [output-format] [target-option] [debug-option] [code-generation-option] [warninf-option] [additional-checks] [error-option] [source]
+</code></pre>
+
+<ul>
+<li>
+<p><code>complier</code>可以是<code>armcc,tcc,armcpp</code></p>
+</li>
+<li>
+<p><code>PCS-options</code>指定所使用的过程调用标准</p>
+</li>
+<li>
+<p><code>source-language</code>指定编译器接受的源程序类型</p>
+</li>
+<li>
+<p><code>search-path</code>指定搜索头文件和源文件的路径</p>
+</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

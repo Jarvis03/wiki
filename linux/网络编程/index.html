@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>网络编程 - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c/c语言拾遗/">C语言拾遗</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../">Linux_learn</a>
+</li>
+                                    
+<li >
+    <a href="../IO/">IO</a>
+</li>
+                                    
+<li >
+    <a href="../MakeFile/">MakeFile</a>
+</li>
+                                    
+<li >
+    <a href="../arm汇编/">ARM汇编</a>
+</li>
+                                    
+<li >
+    <a href="../cmake/">CMake</a>
+</li>
+                                    
+<li >
+    <a href="../link_list/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../linux_shell/">Linux shell</a>
+</li>
+                                    
+<li >
+    <a href="../开发环境搭建/">开发环境搭建</a>
+</li>
+                                    
+<li >
+    <a href="../数据结构/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../编译/">编译</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">网络编程</a>
+</li>
+                                    
+<li >
+    <a href="../进程与线程/">进程</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../编译/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../进程与线程/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">网络编程</a></li>
+            <li><a href="#_2">网络基本知识</a></li>
+            <li><a href="#_3">套接字编程</a></li>
+            <li><a href="#_13">并发服务器</a></li>
+            <li><a href="#_15">广播与组播</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">网络编程</h1>
+<h2 id="_2">网络基本知识</h2>
+<p>| A类</p>
+<p>| B类</p>
+<p>| C类</p>
+<p>| D类</p>
+<p>子网掩码</p>
+<h3 id="osi">OSI模型</h3>
+<h3 id="tcpip">TCP/IP</h3>
+<h2 id="_3">套接字编程</h2>
+<h4 id="_4">创建套接字</h4>
+<pre><code class="c">#include &lt;sys/socket.h&gt;
+int socket(int domain, int type, int flag);
+/* 成功返回描述符，出错返回-1 */
+</code></pre>
+
+<p>参数<code>domain</code>确定通信的特性，包括地址格式，以<code>AF_</code>开头，意指地址族（<code>address family</code>）</p>
+<table>
+<thead>
+<tr>
+<th>domain</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AF_INET</td>
+<td>IPv4因特网域</td>
+</tr>
+<tr>
+<td>AF_INET6</td>
+<td>IPv4因特网域</td>
+</tr>
+<tr>
+<td>AF_UNIX</td>
+<td>UNIX域</td>
+</tr>
+<tr>
+<td>AF_UPSPEC</td>
+<td>未指定</td>
+</tr>
+</tbody>
+</table>
+<p>参数<code>type</code> 确定套接字的类型</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SOCK_DGRAM</td>
+<td>固定长度，无连接的，不可靠报文传递</td>
+</tr>
+<tr>
+<td>SOCK_RAM</td>
+<td>IP协议的数据报接口</td>
+</tr>
+<tr>
+<td>SOCK_SEQPACKET</td>
+<td>固定长度，有序，可靠的，面向连接的报文传递</td>
+</tr>
+<tr>
+<td>SOCK_STREAM</td>
+<td>有序，可靠，双向，面向连接的字节流</td>
+</tr>
+</tbody>
+</table>
+<p>参数<code>protocol</code> 通常是0，表示为给定的域和套接字类型选择默认协议</p>
+<table>
+<thead>
+<tr>
+<th>protocol</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPPROTO_IP</td>
+<td>IPv4网际协议</td>
+</tr>
+<tr>
+<td>IPPROTO_IPV6</td>
+<td>IPv6网际协议</td>
+</tr>
+<tr>
+<td>IPPROTO_ICMP</td>
+<td>因特网控制报文协议</td>
+</tr>
+<tr>
+<td>IPPROTO_RAW</td>
+<td>原始IP数据包协议</td>
+</tr>
+<tr>
+<td>IPPROTO_TCP</td>
+<td>传输控制协议</td>
+</tr>
+<tr>
+<td>IPPROTO_UDP</td>
+<td>用户数据报协议</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_5">字节序</h4>
+<pre><code class="c">#include &lt;arpa/inet.h&gt;
+uint32_t htonl (uint32_t hostint32);  /* host to net 返回网络字节序表示的32位整数 */
+uint16_t htons (uint32_t hostint16);  /* host to net 返回网络字节序表示的16位整数 */
+uint32_t ntohl (uint32_t netint32);  /* net to host 返回主机字节序表示的32位整数 */
+uint16_t ntohs (uint16_t netint16);  /* net to host 返回主机字节序表示的16位整数 */
+</code></pre>
+
+<h4 id="_6">地址</h4>
+<p>linux中地址结构体定义如下</p>
+<pre><code class="c">struct sockaddr {
+    sa_family_t sa_family; /* address family */
+    char        sa_data[14]; /* variable-length address */
+};
+</code></pre>
+
+<p>IPv4因特网域（<code>AF_INET</code>）中地址结构表示如下</p>
+<pre><code class="c">#include &lt;netinet/in.h&gt;
+struct in_addr {
+    in_addr_t s_addr;
+};
+struct scokaddr_in {
+    sa_family_t sin_family;
+    in_port_t   sin_port;
+    struct in_addr sin_addr;
+}
+</code></pre>
+
+<p>IPv6因特网域（<code>AF_INET6</code>）中地址结构表示如下</p>
+<pre><code class="c">struct in6_addr {
+  uint8_t s6_addr[16];  
+};
+struct sockaddr_in6 {
+    sa_family_t sin6_family;
+    in_port_t   sin6_port;
+    uint32_t    sin6_flowinfo;
+    struct in6_addr sin6_addr;
+    uint32_t    sin6_scope_id; /* set of interfaces for scope */
+}
+</code></pre>
+
+<p>它们会被强制转换成<code>sockaddr</code>输入到套接字的历程中</p>
+<h4 id="_7">套接字与地址关联</h4>
+<pre><code class="c">#include &lt;sys/socket/h&gt;
+int bind(int sockfd, const struct sockaddr *addr, socklen_t len);
+</code></pre>
+
+<h4 id="_8">连接</h4>
+<pre><code class="C">int connect (int sockfd, const struct sockaddr *addr, socklen_t len);
+</code></pre>
+
+<p>这里的地址是想与之通信的服务器地址</p>
+<pre><code class="c">int listen(int sockfd, int backlog);
+</code></pre>
+
+<p>服务器调用<code>listen</code>来宣告他愿意接受连接请求，<code>listen</code> 做两件事，</p>
+<ol>
+<li>当<code>socket</code>创建套接字时，它被假设为一个主动套接字，<code>listen</code>函数将主动套接字换成被动套接字</li>
+<li>本函数的第二个参数规定了内核应该为相应套接字排队的最大连接数</li>
+</ol>
+<pre><code class="c">int accept(int sockfd, struct sockaddr *cliaddr, socklen_t *addrlen);
+</code></pre>
+
+<p><code>accept</code>由服务器调用，用于从已完成连接的队列对头返回下一个已完成连接，如果队列为空，进程睡眠（默认）。如果<code>accpet</code>成功，返回值是内核自动生成的全新描述符</p>
+<h4 id="_9">数据传输</h4>
+<pre><code class="c">ssize_t send(int sockfd, const void *buf, size_t nbytes, int flags);
+ssize_t recv(int sockfd, void * buf, size_t nbytes, int flags);
+
+/* 面向无连接 指定目标地址 */
+ssize_t sendto(int socked, const void *buf, size_t n_bytes, int flags,
+               const struct sockaddr *destaddr, socklen_t destlen);
+
+ssize_t recvfrom(int socked, const void *buf, size_t len, int flags,
+               const struct sockaddr *srcaddr, socklen_t *srclen);
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>flag</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSG_CMSG_CLOEXEC</td>
+<td>为UNIX域套接字上接收的文件描述符设置执行时关闭标志</td>
+</tr>
+<tr>
+<td>MSG_DONTWAIT</td>
+<td>启用非阻塞操作（相当于使用O_NONBLOCK）</td>
+</tr>
+<tr>
+<td>MSG_ERRQUEUE</td>
+<td>接收错误信息作为辅助数据</td>
+</tr>
+<tr>
+<td>MSG_OOB</td>
+<td>如果协议支持，获取带外数据</td>
+</tr>
+<tr>
+<td>MSG_PEEK</td>
+<td>返回数据包内容而不真正取走数据包</td>
+</tr>
+<tr>
+<td>MSG_TRUNC</td>
+<td>即使数据包被截断，也返回数据包的实际长度</td>
+</tr>
+<tr>
+<td>MSG_WAITALL</td>
+<td>等待直到所有的数据可用（仅SOCK_STREAM）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_10">套接字选项</h4>
+<p>套接字机制提供了两个套接字选项接口来控制套接字的行为，可以获取或设置一下3种</p>
+<ol>
+<li>通用选项，工作在所有的套接字类型上</li>
+<li>在套接字层次管理的选项，但是依赖于下层协议的支持</li>
+<li>特定于某协议的选项，每个协议独有的</li>
+</ol>
+<pre><code class="c">#include &lt;sys/scoket.h&gt;
+int socksetopt(int sockfd, int level, int option, const void *val, socklen_t len);
+int getsockopt (int sockfd, int level, int option, void *val, socklen_t *lenp);
+</code></pre>
+
+<p><code>SOL_SOCKET</code> 应用层</p>
+<table>
+<thead>
+<tr>
+<th>选项名称</th>
+<th>说明</th>
+<th>数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SO_BROADCAST</td>
+<td>允许发送广播数据</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_DEBUG</td>
+<td>允许调试</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_DONTROUTE</td>
+<td>不查找路由</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_ERROR</td>
+<td>获得套接字错误</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_KEEPALIVE</td>
+<td>保持连接</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_LINGER</td>
+<td>延迟关闭连接</td>
+<td>struct linger</td>
+</tr>
+<tr>
+<td>SO_OOBINLINE</td>
+<td>带外数据放入正常数据流</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_RCVBUF</td>
+<td>接收缓冲区大小</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_SNDBUF</td>
+<td>发送缓冲区大小</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_RCVLOWAT</td>
+<td>接收缓冲区下限</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_SNDLOWAT</td>
+<td>发送缓冲区下限</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_RCVTIMEO</td>
+<td>接收超时</td>
+<td>struct timeval</td>
+</tr>
+<tr>
+<td>SO_SNDTIMEO</td>
+<td>发送超时</td>
+<td>struct timeval</td>
+</tr>
+<tr>
+<td>SO_REUSEADDR</td>
+<td>允许重用本地地址和端口</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_TYPE</td>
+<td>获得套接字类型</td>
+<td>int</td>
+</tr>
+<tr>
+<td>SO_BSDCOMPAT</td>
+<td>与BSD系统兼容</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<p><code>IPPROTO_IP</code> IP层/网络层</p>
+<table>
+<thead>
+<tr>
+<th>选项名称</th>
+<th>说明</th>
+<th>数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP_HDRINCL</td>
+<td>在数据包中包含IP首部</td>
+<td>int</td>
+</tr>
+<tr>
+<td>IP_OPTINOS</td>
+<td>IP首部选项</td>
+<td>int</td>
+</tr>
+<tr>
+<td>IP_TOS</td>
+<td>服务类型</td>
+<td></td>
+</tr>
+<tr>
+<td>IP_TTL</td>
+<td>生存时间</td>
+<td>int</td>
+</tr>
+<tr>
+<td>IP_ADD_MEMBERSHIP</td>
+<td>将指定的IP加入多播组</td>
+<td>struct ip_mreq</td>
+</tr>
+</tbody>
+</table>
+<p><code>IPPRO_TCP</code> 传输层</p>
+<table>
+<thead>
+<tr>
+<th>选项名称</th>
+<th>说明</th>
+<th>数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP_MAXSEG</td>
+<td>TCP最大数据段的大小</td>
+<td>int</td>
+</tr>
+<tr>
+<td>TCP_NODELAY</td>
+<td>不使用Nagle算法</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">面向连接的编程</h3>
+<h3 id="_12">面向无连接的编程</h3>
+<h2 id="_13">并发服务器</h2>
+<h3 id="io">IO多路复用</h3>
+<h3 id="_14">多线程</h3>
+<h2 id="_15">广播与组播</h2></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

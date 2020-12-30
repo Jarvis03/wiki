@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Qt入门知识点 - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c/c语言拾遗/">C语言拾遗</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../cpp知识点/">Cpp知识点</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Qt入门知识点</a>
+</li>
+                                    
+<li >
+    <a href="../readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../linux/">Linux_learn</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/IO/">IO</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/MakeFile/">MakeFile</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/arm汇编/">ARM汇编</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/cmake/">CMake</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/link_list/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/linux_shell/">Linux shell</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/开发环境搭建/">开发环境搭建</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/数据结构/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/编译/">编译</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/网络编程/">网络编程</a>
+</li>
+                                    
+<li >
+    <a href="../../linux/进程与线程/">进程</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../cpp知识点/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../readme/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#qt">QT 入门知识点</a></li>
+        <li class="main "><a href="#_1">安装</a></li>
+        <li class="main "><a href="#_2">工具</a></li>
+        <li class="main "><a href="#_3">构建编译</a></li>
+        <li class="main "><a href="#_4">信号与槽机制</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="qt">QT 入门知识点</h2>
+<h2 id="_1">安装</h2>
+<p>需要先下载对应平台的安装包,以下两个网站都可以下载<a href="http://download.qt.io/archive/qt">官方镜像</a>, <a href="https://mirrors.tuna.tsinghua.edu.cn/qt/">清华大学镜像</a>。在国内清华大学的镜像网站会更快点。</p>
+<ul>
+<li>windows</li>
+</ul>
+<p>安装到下图步骤时候，应该选择一个编译器，默认是没有勾选的。笔者第一次没有勾选此选项。试图使用自己电脑已经安装的<code>mingW</code>,结果在配置</p>
+<p><code>qmake</code>时找不到该工具。</p>
+<blockquote>
+<p>安装完成后需要配置环境路径</p>
+</blockquote>
+<ul>
+<li>linux</li>
+</ul>
+<p>安装完成后，配置环境路径为<code>/home/linux/Qt5.12.3/5.12.3/gcc_64/bin</code>。执行<code>qmake -v</code> 查看版本，若能显示则安装成功。</p>
+<p><code>QT</code>运行时依赖<code>libgl</code>和<code>libgstreamer</code></p>
+<pre><code class="shell">sudo apt-get install libgl1-mesa-dev
+sudo apt-get install libgstreamer0.10-0
+sudo apt-get install libgstreamer-plugins-base0.10-0
+</code></pre>
+
+<h2 id="_2">工具</h2>
+<ul>
+<li>
+<p><code>assistant</code>   帮助手册</p>
+</li>
+<li>
+<p><code>designer</code>    设计<code>ui</code>图形化界面</p>
+</li>
+<li>
+<p><code>moc</code>         :元对象编辑器
+  将非标准<code>C++</code>的语法，转换为标准的<code>C++</code>语法</p>
+</li>
+<li>
+<p><code>qmake</code>       <code>QT</code>工程构建器
+  构建<code>QT</code>工程</p>
+</li>
+<li>
+<p><code>rcc</code>         资源管理工具 
+  将资源文件，转换为标准的<code>C++</code>语法 </p>
+</li>
+<li>
+<p><code>uic</code>        <code>UI</code>转换器 
+  将<code>ui</code>文件转换为标准的<code>C++</code>式头文件</p>
+</li>
+<li>
+<p><code>qtcreator</code>   集成<code>IDE</code>开发环境 
+  将上边所有的工具都进行集成</p>
+</li>
+</ul>
+<h2 id="_3">构建编译</h2>
+<ol>
+<li><code>qmake -project</code></li>
+</ol>
+<p>首次构建，生成<code>***.pro</code>文件。若需要增加模块，和源代码，需要修改此文件</p>
+<ol>
+<li><code>qmake</code></li>
+</ol>
+<p>生成<code>Makefile</code>文件</p>
+<ol>
+<li><code>make</code></li>
+</ol>
+<p>生成可执行文件</p>
+<h2 id="_4">信号与槽机制</h2>
+<p>信号和槽本质就是函数，QT的通信机制</p>
+<pre><code class="c++">//连接函数
+//              connect
+//  信号函数   ---------&gt; 槽函数
+//
+// SIGNAL(信号函数名(形参类型)) 
+//      将信号函数转换为char *类型    
+//  SLOT(槽函数名(形参类型))  
+//      将槽函数转换为char *类型 
+
+    QObject::connect(
+    const QObject *sender,    //发送者
+    const char *signal,       //信号
+    const QObject *receiver,  // 接收者
+    const char *method,       //槽函数
+    Qt::ConnectionType type = Qt::AutoConnection)
+
+//!! 定义信号与槽函数的使用需要使用宏 Q_OBJECT
+// 信号函数参的个数 &gt;= 槽函数，一般情况是个数和类型一致       
+</code></pre>
+
+<p>一般情况下槽函数和信号函数的参数个数与类型一致，如果槽函数参数个数多于信号函数，必须提供缺省值</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

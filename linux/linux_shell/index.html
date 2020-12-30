@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Linux shell - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c/c语言拾遗/">C语言拾遗</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../">Linux_learn</a>
+</li>
+                                    
+<li >
+    <a href="../IO/">IO</a>
+</li>
+                                    
+<li >
+    <a href="../MakeFile/">MakeFile</a>
+</li>
+                                    
+<li >
+    <a href="../arm汇编/">ARM汇编</a>
+</li>
+                                    
+<li >
+    <a href="../cmake/">CMake</a>
+</li>
+                                    
+<li >
+    <a href="../link_list/">链表</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Linux shell</a>
+</li>
+                                    
+<li >
+    <a href="../开发环境搭建/">开发环境搭建</a>
+</li>
+                                    
+<li >
+    <a href="../数据结构/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../编译/">编译</a>
+</li>
+                                    
+<li >
+    <a href="../网络编程/">网络编程</a>
+</li>
+                                    
+<li >
+    <a href="../进程与线程/">进程</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../link_list/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../开发环境搭建/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#linux-base">linux base</a></li>
+            <li><a href="#linux-shell">linux shell</a></li>
+            <li><a href="#shell_1">shell脚本</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="linux-base">linux base</h2>
+<h3 id="linux-shell">linux shell</h3>
+<h4 id="ubuntu-system">ubuntu system</h4>
+<ul>
+<li>查看版本：<code>cat /etc/issue</code></li>
+<li>查看架构：<code>uname -m</code></li>
+<li>查看内核版本： <code>uname -r</code></li>
+</ul>
+<h4 id="terminal">terminal</h4>
+<ul>
+<li>
+<p><code>ctrl + alt + t</code> : 创建新终端</p>
+</li>
+<li>
+<p><code>ctrl + shift + n</code> : 在相同路径下再开启新终端（必须有终端）</p>
+</li>
+<li>
+<p><code>ctrl + shift + t</code>: 左右分屏打开同路径终端（必须有终端）</p>
+</li>
+<li>
+<p>关闭终端：<code>exit</code> 或 <code>ctrl + d</code></p>
+</li>
+<li>
+<p><code>linux@ubuntu：～$</code> :如下表</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>linux</th>
+<th>@ubuntu:</th>
+<th>~</th>
+<th>$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户名</td>
+<td>主机名</td>
+<td>路径：<code>～</code>表示<code>home/</code>，<code>/</code>表示<code>root/</code></td>
+<td>用户权限:<code>$</code>普通用户，<code>#</code>管理员</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pack-manager">pack  manager</h4>
+<p>ubuntu 支持Ded包管理工具，常用工具包括<code>dpkg</code>，<code>apt</code></p>
+<h5 id="dpkg">dpkg</h5>
+<p>本地离线安装</p>
+<ul>
+<li><code>-i</code>: 安装debian软件包</li>
+<li><code>-r</code>: 移除已安装软件包</li>
+<li><code>-P</code>: 移除已安装软件包和配置文件</li>
+<li><code>-L</code>: 列出安装的软件包清单</li>
+</ul>
+<h5 id="apt">apt</h5>
+<ol>
+<li>
+<p><code>etc/apt/source.list</code>是apt镜像的地址文件</p>
+</li>
+<li>
+<p><code>var/lib/apt/lists</code>存放apt本地软件包的索引文件</p>
+</li>
+<li>
+<p><code>var/cache/apt/archives</code> 是apt本地缓存目录</p>
+</li>
+<li>
+<p><code>update</code>:下载更新软件包列表信息</p>
+</li>
+<li>
+<p><code>upgrade</code>:系统中所有的软件包升级到最新</p>
+</li>
+<li>
+<p><code>install</code>: 下载所需软件包并进行安装</p>
+</li>
+<li>
+<p><code>remove</code>: 卸载</p>
+</li>
+<li>
+<p><code>clean</code>：清楚下载的软件包</p>
+</li>
+<li>
+<p><code>apt-get --reinstall install</code>:重新安装</p>
+</li>
+<li>
+<p><code>apt-get --purge remove</code>:完全卸载</p>
+</li>
+<li>
+<p><code>apt-get -f install</code>: 修复软件包的依赖关系</p>
+</li>
+</ol>
+<h4 id="base-command">base command</h4>
+<p>多个命令一行书写使用<code>：</code></p>
+<p>一条命令多行书写使用<code>\</code></p>
+<h5 id="cd">cd</h5>
+<ul>
+<li><code>cd -</code>: 回到上次工作目录</li>
+</ul>
+<h5 id="mkdir">mkdir</h5>
+<ul>
+<li><code>-p</code>:可以一次建立多个目录</li>
+</ul>
+<h5 id="cp-rm">cp  rm</h5>
+<ul>
+<li><code>-r</code>:递归删除</li>
+<li><code>rm -rf</code>:删除目录名</li>
+</ul>
+<h5 id="ln">ln</h5>
+<ul>
+<li><code>-s</code>:建立连接符号</li>
+</ul>
+<h5 id="tar">tar</h5>
+<ul>
+<li><code>-c</code> : 打包</li>
+<li><code>-x</code>：解包</li>
+<li>
+<p><code>-f</code>: 普通文件</p>
+</li>
+<li>
+<p><code>-C</code>：指定路径</p>
+</li>
+</ul>
+<h5 id="grep">grep</h5>
+<p><code>grep "string" * -nR</code>:当前目录下递归搜索</p>
+<ul>
+<li><code>-I</code>：不区分大小写</li>
+<li><code>-n</code>：显示匹配行以及行号</li>
+<li><code>grep "h" ./ -r | less</code>:配合管道将其转到less（分页器）</li>
+</ul>
+<h5 id="find">find</h5>
+<p><code>find 路径 -name filename</code>:从当前目录开始寻找指定文件</p>
+<ul>
+<li><code>-name</code>: 支持通配符<code>*</code>和<code>？</code>  如<code>find ./ -name test*.c</code></li>
+</ul>
+<h5 id="head-tail">head 与tail</h5>
+<p>显示文件指定行：<code>head -line file | tail -1</code></p>
+<h5 id="more-less">more 与 less</h5>
+<p><code>q</code>:退出，less 支持字符查找：<code>/str</code></p>
+<h5 id="wc">wc</h5>
+<p>对文件内容进行统计</p>
+<ul>
+<li><code>-c</code>: 字符数</li>
+<li><code>-w</code>:单词数</li>
+<li><code>-l</code>: 行数</li>
+</ul>
+<h5 id="cut">cut</h5>
+<p>对字符串进行分割</p>
+<ul>
+<li><code>-d</code>:指定分隔符</li>
+<li><code>-f</code>:指定需要的区域</li>
+</ul>
+<p>如截取<code>/etc/passwd</code>文件内的用户名：</p>
+<p><code>cat  /etc/passwd | cut -d ":" -f 1</code></p>
+<h5 id="alias">alias</h5>
+<p>定义别名</p>
+<p><code>alias listsoft = 'ls /var/cache/apt/archives'</code></p>
+<p>取消别名使用<code>unalias</code></p>
+<p><strong>配置文件</strong>: <code>.bashrc</code> 、<code>.profile</code></p>
+<h4 id="shell">shell 基本配置</h4>
+<h5 id="history">History</h5>
+<p>使用<code>history</code>命令可以将历史命令打印到终端，linux默认保存1000条历史记录，可以设置<code>HISTSIZE</code>来修改条数</p>
+<p><strong>永久修改</strong> : 修改<code>、home/.bashrc</code> 的 HISTSIZE 并使用<code>source</code>命令使其生效</p>
+<h5 id="_1">环境变量</h5>
+<p>添加环境变量： <code>/etc/profile</code>中添加 <code>export PATH=/home/guo:$PATH</code>,然后使用<code>source</code>使其生效</p>
+<h5 id="_2">查看磁盘</h5>
+<p>如使用 <code>df -h</code> 查看各个磁盘，找到优盘，将其挂载到<code>/mnt</code></p>
+<p>如 <code>mount -t  vfat /dev/sdb4 /mnt</code></p>
+<h5 id="_3">用户与组</h5>
+<ul>
+<li><code>/etc/passwd</code>可以识别用户清单，当用户登录时系统会查询这个文件</li>
+</ul>
+<p><code>root: x: 1: 1:root,,,:/root:/bin/bash</code></p>
+<table>
+<thead>
+<tr>
+<th>root</th>
+<th>x</th>
+<th>1</th>
+<th>1</th>
+<th>root,,,</th>
+<th>/root</th>
+<th>/binbash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>登录名</td>
+<td>密码口令</td>
+<td>UID</td>
+<td>GID</td>
+<td>个人信息</td>
+<td>主目录</td>
+<td>shell</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><code>/etc/shadow</code>:加密的用户清单</p>
+</li>
+<li>
+<p><code>/etc/group</code>:组名称和成员</p>
+</li>
+</ul>
+<p>包含：组名，加密口令， GID，成员列表</p>
+<p><strong>常用命令</strong>:</p>
+<p><code>adduser</code>,<code>userdel</code>,<code>usermod</code>,<code>groupadd</code>,<code>groupdel</code></p>
+<h5 id="_4">网络配置</h5>
+<p><code>/etc/network/interfaces</code>文件可以进行配置，配置完成后使用<code>sudo /etc/init.d/networking restart</code>命令使其生效</p>
+<h3 id="shell_1">shell脚本</h3>
+<h4 id="_5">基本过程</h4>
+<ol>
+<li>建立<code>.sh</code> 后缀的文件</li>
+<li><code>chmod</code>修改文件权限</li>
+<li>脚本第一行<code>#！/bin/bash</code></li>
+</ol>
+<h4 id="_6">变量</h4>
+<ol>
+<li>用户自定义变量</li>
+</ol>
+<blockquote>
+<p>变量名=值    (<strong>等号无空格</strong>)</p>
+</blockquote>
+<ol>
+<li>位置参数</li>
+</ol>
+<p><code>$0 $1....</code></p>
+<ol>
+<li>
+<p>预定义变量</p>
+</li>
+<li>
+<p><code>$#</code>:命令行参数的个数</p>
+</li>
+<li><code>$@</code>:包含所有命令行参数：`$1$2$3..</li>
+<li><code>$?</code>:包含前一个命令的退出状态</li>
+<li><code>$*</code> :包含所有命令行参数：<code>$1$2$3..</code></li>
+<li>
+<p><code>$$</code>:包含正在执行的进程ID号</p>
+</li>
+<li>
+<p>环境变量</p>
+</li>
+</ol>
+<p><code>HOME</code>,<code>PATH</code>等等</p>
+<h4 id="_7">运算</h4>
+<h5 id="_8">运算符</h5>
+<p><code>+</code>，<code>-</code>，<code>\*</code>,<code>/</code>,<code>%</code></p>
+<h5 id="_9">运算命令</h5>
+<p><code>expr</code></p>
+<blockquote>
+<p>例如 add=`expr $var1 + $var2`</p>
+</blockquote>
+<h4 id="_10">判断</h4>
+<ol>
+<li>
+<p>字符串</p>
+</li>
+<li>
+<p><code>=</code>:相等 </p>
+</li>
+<li>
+<p><code>！=</code>：不等</p>
+</li>
+<li>
+<p><code>-z</code>:长度是否为0</p>
+</li>
+<li>
+<p><code>-n</code>：长度是否不为0</p>
+</li>
+<li>
+<p>数字</p>
+</li>
+<li><code>-eq</code>：等于 <code>equal</code></li>
+<li><code>-ne</code>: 不等于 <code>not equal</code></li>
+<li><code>-gt</code>：大于<code>greater than</code></li>
+<li><code>-ge</code>：大于等于<code>greater equal</code></li>
+<li><code>-lt</code>：小于 <code>less than</code></li>
+<li><code>-le</code>: 小于等于 <code>less epual</code></li>
+</ol>
+<h4 id="_11">常见符号区别</h4>
+<ul>
+<li>
+<p><code>${}</code>:变量替换</p>
+</li>
+<li>
+<p><code>()</code></p>
+</li>
+<li>
+<p>命令组。括号中的命令将会新开一个子shell顺序执行，所以括号中的变量不能够被脚本余下的部分使用。括号中多个命令之间用分号隔开，最后一个命令可以没有分号，各命令和括号之间不必有空格。</p>
+</li>
+<li>命令替换 等同于``，shell扫描一遍命令行，发现了<code>$(cmd)</code>结构，便将$<code>(cmd)</code>中的<code>cmd</code>执行一次，得到其标准输出，再将此输出放到原来命令。有些shell不支持，如<code>tcsh</code>。</li>
+<li>
+<p>用于初始化数组。如：<code>array=(a b c d)</code></p>
+</li>
+<li>
+<p><code>(())</code></p>
+</li>
+<li>
+<p>整数扩展。这种扩展计算是整数型的计算，不支持浮点型。((exp))结构扩展并计算一个算术表达式的值，如果表达式的结果为0，那么返回的退出状态码为1，或者 是"假"，而一个非零值的表达式所返回的退出状态码将为0，或者是"true"。若是逻辑判断，表达式exp为真则为1,假则为0。如<code>（（2*3））</code></p>
+</li>
+<li>
+<p>只要括号中的运算符、表达式符合C语言运算规则，都可用在<code>$((exp))</code>中，甚至是三目运算符。作不同进位(如二进制、八进制、十六进制)运算时，输出结果全都自动转化成了十进制。如：<code>echo $((16#5f))</code> 结果为95 (16进位转十进制)</p>
+</li>
+<li>单纯用 <code>(( ))</code> 也可重定义变量值，比如 <code>a=5; ((a++))</code> 可将 $a 重定义为6</li>
+<li>
+<p>常用于算术运算比较，双括号中的变量可以不使用$符号前缀。括号内支持多个表达式用逗号分开。 只要括号中的表达式符合C语言运算规则,比如可以直接使用<code>for((i=0;i&lt;5;i++))</code></p>
+</li>
+<li>
+<p><code>[]</code></p>
+</li>
+<li>bash 的内部命令，[和test是等同的。如果我们不用绝对路径指明，通常我们用的都是bash自带的命令。if/test结构中的左中括号是调用test的命令标识，右中括号是关闭条件判断的。这个命令把它的参数作为比较表达式或者作为文件测试，并且根据比较的结果来返回一个退出状态码。if/test结构中并不是必须右中括号，但是新版的Bash中要求必须这样。</li>
+<li>Test和[]中可用的比较运算符只有==和!=，两者都是用于字符串比较的，不可用于整数比较，整数比较只能使用-eq，-gt这种形式。无论是字符串比较还是整数比较都不支持大于号小于号。如果实在想用，对于字符串比较可以使用转义形式，如果比较"ab"和"bc"：[ ab \&lt; bc ]，结果为真，也就是返回状态为0。[ ]中的逻辑与和逻辑或使用-a 和-o 表示。</li>
+<li>字符范围。用作正则表达式的一部分，描述一个匹配的字符范围。作为test用途的中括号内不能使用正则。</li>
+<li>在一个array 结构的上下文中，中括号用来引用数组中每个元素的编号。</li>
+<li>
+<p><code>[[ ]]</code></p>
+</li>
+<li>
+<p><code>[[</code>是 bash 程序语言的关键字。并不是一个命令，<code>[[ ]]</code> 结构比<code>[ ]</code>结构更加通用。在<code>[[</code>和<code>]]</code>之间所有的字符都不会发生文件名扩展或者单词分割，但是会发生参数扩展和命令替换。</p>
+</li>
+<li>支持字符串的模式匹配，使用<code>=~</code>操作符时甚至支持shell的正则表达式。字符串比较时可以把右边的作为一个模式，而不仅仅是一个字符串，比如<code>[[ hello == hell? ]]</code>，结果为真。<code>[[ ]]</code> 中匹配字符串或通配符，不需要引号。</li>
+<li>使用<code>[[ ... ]]</code>条件判断结构，而不是<code>[ ... ]</code>，能够防止脚本中的许多逻辑错误。比如，<code>&amp;&amp;,||,&lt;,&gt;</code>操作符能够正常存在于<code>[[ ]]</code>条件判断结构中，但是如果出现在<code>[ ]</code>结构中的话，会报错。比如可以直接使用<code>if [[ $a != 1 &amp;&amp; $a != 2 ]]</code>, 如果不适用双括号, 则为<code>if [ $a -ne 1] &amp;&amp; [ $a != 2 ]</code>或者<code>if [ $a -ne 1 -a $a != 2 ]</code>。</li>
+<li>bash把双中括号中的表达式看作一个单独的元素，并返回一个退出状态码。</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>开发环境搭建 - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c/c语言拾遗/">C语言拾遗</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../">Linux_learn</a>
+</li>
+                                    
+<li >
+    <a href="../IO/">IO</a>
+</li>
+                                    
+<li >
+    <a href="../MakeFile/">MakeFile</a>
+</li>
+                                    
+<li >
+    <a href="../arm汇编/">ARM汇编</a>
+</li>
+                                    
+<li >
+    <a href="../cmake/">CMake</a>
+</li>
+                                    
+<li >
+    <a href="../link_list/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../linux_shell/">Linux shell</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">开发环境搭建</a>
+</li>
+                                    
+<li >
+    <a href="../数据结构/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../编译/">编译</a>
+</li>
+                                    
+<li >
+    <a href="../网络编程/">网络编程</a>
+</li>
+                                    
+<li >
+    <a href="../进程与线程/">进程</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../linux_shell/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../数据结构/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">开发环境搭建</a></li>
+            <li><a href="#_2">编译工具</a></li>
+            <li><a href="#_3">服务安装</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">开发环境搭建</h1>
+<h2 id="_2">编译工具</h2>
+<p>编译的代码需要在单板上运行，因此需要使用交叉编译工具。可以使用<a href="http://crosstool-ng.org/download/crosstool-ng/">crosstool</a>制作。制作步骤<a href="交叉工具制作步骤">^ 1</a>待续。若已经制作好编译工具，如<code>crosstool-gcc-4.9.4</code>,将其添加到环境变量</p>
+<ol>
+<li><code>export PATH=$PATH:/opt/crosstool-gcc-4.9.4/bin</code>,立即生效</li>
+<li>修改<code>~/.bashrc</code>, 添加<code>export PATH=$PATH:/opt/crosstool-gcc-4.9.4/bin</code>,重启终端有效</li>
+<li>修改<code>etc/profile</code>,添加<code>export PATH=$PATH:/opt/crosstool-gcc-4.9.4/bin</code>,重新登录有效</li>
+</ol>
+<h2 id="_3">服务安装</h2>
+<h3 id="_4">网络设置</h3>
+<h4 id="_5">虚拟机设置</h4>
+<ol>
+<li>编辑-&gt;虚拟网络编辑器-&gt;更改设置-&gt;VMnet0-&gt;桥接到上网的网卡</li>
+<li>以太网卡设置为100M全双工，因为开发板支持的为100M</li>
+</ol>
+<h4 id="linux">linux 设置</h4>
+<p>通过使用界面，在设置-&gt;网络连接中设置网络模式以及IP。或者通过<code>/etc/network/interfaces</code> 设置，最终应达到可能上网的目的</p>
+<h4 id="_6">开发板设置</h4>
+<p>开发板与linux的网络IP设置为同一网段，假定都是<code>192.168.1.X</code></p>
+<p>设置命令</p>
+<pre><code class="shell">print  //查看环境变量
+set gatewayip 192.168.1.1
+set ipaddr    192.168.1.3
+set netmark   255.255.255.0
+set serverip  192.168.1.5  //服务器IP
+save    //保存
+----------------
+ping 192.168.1.5
+//若返回 host 192.168.1.5 is alive 则表明成功联通
+</code></pre>
+
+<h3 id="tftp">TFTP服务器安装</h3>
+<ol>
+<li>安装软件</li>
+</ol>
+<pre><code class="shell">apt-get install tftpd-hpa #安装服务器 
+apt-get install tftp-hpa  #安装客户端
+
+</code></pre>
+
+<ol>
+<li>修改配置</li>
+</ol>
+<pre><code class="shell">1 # /etc/default/tftpd-hpa
+2 TFTP_USERNAME=&quot;tftp&quot;
+3 TFTP_DIRECTORY=&quot;/tftpboot &quot; //改成你想要的那个路径
+4 TFTP_ADDRESS=&quot;0.0.0.0:69&quot;
+5 TFTP_OPTIONS=&quot;-l -c -s&quot;        //这里是选项
+// 重启服务
+1 sudo /etc/init.d/xinetd reload
+2 sudo /etc/init.d/xinetd restart
+</code></pre>
+
+<ol>
+<li>测试</li>
+</ol>
+<p>```shell
+   netstat -a|grep tftp  # 是否启动</p>
+<p>udp        0      0 <em>:tftp                  </em>:*  #表示启动
+   ```</p>
+<p>测试上传和下载</p>
+<p><code>shell
+   cd /home/guo/test  # 选择一个路径，不能为tftp服务器根路径
+   touch file.c       # 创建一个要上传的文件
+   tftp 127.0.0.1     # 开启服务
+   tftp&gt; put file.c   # 上传文件，然后去tfp服务器的路径下载查看是否有此文件</code></p>
+<h3 id="nfs">NFS服务安装</h3>
+<ol>
+<li>安装</li>
+</ol>
+<p><code>shell
+sudo qpt-get install nfs-kernel-server  # 安装
+mkdir /home/guo/rootfs                 # 创建nfs服务的根目录</code></p>
+<ol>
+<li>配置</li>
+</ol>
+<p><code>shell
+   sudo vi /etc/exports
+   /home/guo/rootfs *(rw,sync,no_subtree_check,no_root_squash) # 添加此内容
+   # *:所有用户
+   # rw: 可读可写
+   # sync: 同步
+   # no_subtree: 不检查子目录
+   # no_root_squash: 如果客户端是root，对该目录具有root权限
+   sudo service nfs-kernel-server restart</code></p>
+<ol>
+<li>测试</li>
+</ol>
+<p><code>shell
+   sudo mount -t nfs 127.0.0.1:/home/guo/rootfs /mnt #挂载到/mnt
+   ls /mnt     # 查看是否与rootfs内容一致
+   umount /mnt  #接触挂载</code></p>
+<h3 id="nfs_1">开发板使用NFS</h3>
+<ol>
+<li>uboot设置</li>
+</ol>
+<pre><code class="shell"> set bootargs &quot;root=/dev/nfs nfsroot=192.168.1.5:/home/guo/rootfs rw console=/dev/ttySAC0,115200 init=/linuxrc ip=192.168.1.3&quot;
+
+# root=/dev/nfs  使用nfs服务
+# nfsroot=192.168.1.5:/home/guo/rootfs  根文件系统的路径  IP 是Ubuntu的IP
+# rw    可读可写
+# console=/dev/ttySAC0,115200     内核启动使用哪个串口作为调试口
+# init=/linuxrc     内核启动之后执行的第一个进程对应的程序
+# ip=192.168.1.3        内核启动之后的ip地址   也就是开发板的IP地址
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>链表 - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c/c语言拾遗/">C语言拾遗</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../">Linux_learn</a>
+</li>
+                                    
+<li >
+    <a href="../IO/">IO</a>
+</li>
+                                    
+<li >
+    <a href="../MakeFile/">MakeFile</a>
+</li>
+                                    
+<li >
+    <a href="../arm汇编/">ARM汇编</a>
+</li>
+                                    
+<li >
+    <a href="../cmake/">CMake</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">链表</a>
+</li>
+                                    
+<li >
+    <a href="../linux_shell/">Linux shell</a>
+</li>
+                                    
+<li >
+    <a href="../开发环境搭建/">开发环境搭建</a>
+</li>
+                                    
+<li >
+    <a href="../数据结构/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../编译/">编译</a>
+</li>
+                                    
+<li >
+    <a href="../网络编程/">网络编程</a>
+</li>
+                                    
+<li >
+    <a href="../进程与线程/">进程</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../cmake/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../linux_shell/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">链表</a></li>
+            <li><a href="#_2">单链表</a></li>
+            <li><a href="#_8">双链表</a></li>
+            <li><a href="#_10">栈</a></li>
+            <li><a href="#_11">队列</a></li>
+            <li><a href="#_13">链式</a></li>
+            <li><a href="#_14">树</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">链表</h1>
+<h2 id="_2">单链表</h2>
+<h4 id="_3">单链表数据结构</h4>
+<pre><code class="c">typedef int elem_type;
+typedef struct s_list{
+    elem_type data;
+    struct s_list *next;
+} s_list_node,*s_list_pt;
+
+</code></pre>
+
+<p>包含数据和节点指针</p>
+<h4 id="_4">头插法和尾插法</h4>
+<h5 id="_5">头插法</h5>
+<pre><code class="c">int s_list_head_insert(s_list_pt p_head, elem_type data)
+{
+    if(NULL == p_head) {
+        return -1;
+    }
+    s_list_pt p_node = s_list_node_create();
+    if(NULL == p_node) {
+        return -2;
+    }
+    p_node-&gt;data = data;
+    /*头插法*/
+    p_node-&gt;next = p_head-&gt;next;
+    p_head-&gt;next = p_node;
+}
+</code></pre>
+
+<p>与链表的插入一样，先获取插入位置的指针<code>p_node-&gt;next = p_head-&gt;next;</code>，然后将此节点指针赋给上一个节点的<code>next</code>指针，<code>p_head-&gt;next = p_node;</code></p>
+<h5 id="_6">尾插法</h5>
+<pre><code class="c">int s_list_tail_insert(s_list_pt p_head, elem_type data)
+{
+    s_list_pt p_index = NULL;
+    s_list_pt p_node = NULL;
+    if(p_head == NULL) {
+        return -1;
+    }
+    p_index = p_head;
+    while(p_index-&gt;next) {
+        p_index = p_index-&gt;next;
+
+    }
+    /*找到链表的末尾*/
+    p_node = s_list_node_create();
+    if(p_node == NULL){
+
+       return -1;
+    }
+    p_node-&gt;data = data;
+    p_index-&gt;next = p_node;
+
+    return 0;
+}
+</code></pre>
+
+<p>尾插法需要遍历到链表的末端，将节点插入即可</p>
+<h4 id="_7">链表逆置</h4>
+<pre><code class="c">int s_list_reverse(s_list_pt p_head)
+{
+    s_list_pt ptr = NULL, cur = NULL;
+    ptr = p_head-&gt;next;
+    p_head-&gt;next = NULL;
+    while (ptr){
+        cur = ptr;
+        ptr = ptr-&gt;next;
+        /*头插法*/
+        cur-&gt;next = p_head-&gt;next;
+        p_head-&gt;next = cur;
+    }
+    return 0;
+}
+</code></pre>
+
+<p>首先断开头节点和首节点的链接，然后需要两个指针，<code>ptr</code>作为指针索引，向后遍历链表，<code>cur</code>保存当前指针，每次索引将<code>cur</code>指针使用头插法 插入头结点。</p>
+<blockquote>
+<p>此方法引申出 链表排序</p>
+</blockquote>
+<h2 id="_8">双链表</h2>
+<h4 id="_9">链表插入</h4>
+<p>链表插入注意，应该先填充新节点的前驱后继，然后断开原节点，插入新节点</p>
+<blockquote>
+<p>参考linux的 list.h 代码</p>
+</blockquote>
+<pre><code class="c">/**
+ * list_add - add a new entry
+ * @new: new entry to be added
+ * @head: list head to add it after
+ *
+ * Insert a new entry after the specified head.
+ * This is good for implementing stacks.
+ */
+static inline void list_add(struct list_head *new, struct list_head *head)
+{
+    __list_add(new, head, head-&gt;next);
+}
+static inline void __list_add(struct list_head *new,
+                  struct list_head *prev,
+                  struct list_head *next)
+{
+    next-&gt;prev = new;    //g:后面节点的前驱设为 new
+    new-&gt;next = next;    //g:new节点设置前驱后继
+    new-&gt;prev = prev;
+    prev-&gt;next = new;    //g:前面节点的后继（必须放在 next-&gt;prev = new 之后）
+}
+</code></pre>
+
+<h2 id="_10">栈</h2>
+<p>栈的特性为先进后出，实现栈可以用顺序表和链式表。顺序表实现栈需要有标记栈顶的指针。链式表实现栈的思路是使用相同的方法插入取出，比如头插法插入然后取出，便实现了先进后出。</p>
+<h2 id="_11">队列</h2>
+<h3 id="_12">顺序</h3>
+<pre><code class="c">//循环队列
+typedef int elem_type;
+typedef struct queue{
+  elem_type queue[QUEUE_MAIX_SIZE];
+  unsigned int rear;
+  unsigned int front;
+}seq_queue_t;
+
+</code></pre>
+
+<ol>
+<li>
+<p>入队移动rear，出队移动front</p>
+</li>
+<li>
+<p>rear front 类型为 <code>unsigned int</code> 当溢出时回归0，依然满足条件，实际要用的数组索引 <code>idnex = front % QUEUE_MAIX_SIZE</code></p>
+</li>
+<li>
+<p><code>rear = front</code> 为空，  <code>(rear + 1) % QUEUE_MAIX_SIZE= front % QUEUE_MAIX_SIZE</code>为满</p>
+</li>
+</ol>
+<h2 id="_13">链式</h2>
+<pre><code class="c">typedef int elem_type;
+typedef struct node {
+    elem_type data;
+    struct node *next;
+} link_list_t;
+typedef struct queue{
+   link_list_t *front;
+   link_list_t *rear;
+}link_queue_t;
+
+</code></pre>
+
+<p><strong>NOTE</strong>: </p>
+<p><code>front</code>指向链表的头结点，出队时候可以直接<code>free</code>，<code>rear</code>指向链表的尾节点，入队时采用尾插法。</p>
+<pre><code class="c">
+int link_queue_input(link_queue_t *p_queue, elem_type data)
+{
+   if(NULL == p_queue) {
+       return -1;
+   }
+   link_list_t * p_node = (link_list_t*)malloc(sizeof(link_list_t));
+   if (p_node == NULL ){
+       return -1;
+   }
+   p_node-&gt;data = data;
+   p_node-&gt;next = NULL;
+
+   p_queue-&gt;rear-&gt;next = p_node;
+   p_queue-&gt;rear = p_node;
+   return 0;
+}
+int link_queue_output(link_queue_t *p_queue, elem_type *data)
+{
+    link_list_t *p_temp = NULL;
+    if(link_queue_is_empty(p_queue)) {
+        return -1;
+    }
+    p_temp = p_queue-&gt;front-&gt;next;
+    *data = p_temp-&gt;data;
+    p_queue-&gt;front-&gt;next = p_temp-&gt;next;
+    if (p_temp != NULL){
+    free(p_temp);
+    p_temp = NULL;
+    }
+    return 0;
+}
+</code></pre>
+
+<h2 id="_14">树</h2>
+<h3 id="_15">完全二叉树</h3>
+<h4 id="_16">创建</h4>
+<pre><code class="c">btree_t* binary_tree_create(int cur, int node_num)
+{
+    btree_t *p_node = (btree_t*)malloc(sizeof(btree_t));
+    if(NULL == p_node) {
+        return NULL;
+    }
+    p_node-&gt;data = cur;
+    if (2 * cur &lt;= node_num) {
+       p_node-&gt;lchild = binary_tree_create(2 * cur, node_num);     
+    } else {
+        p_node-&gt;lchild  = NULL;
+    }
+    if (2 * cur + 1 &lt;= node_num) {
+        p_node-&gt;rchild = binary_tree_create(2 * cur + 1, node_num);
+    } else {
+        p_node-&gt;rchild = NULL;
+    }
+    return p_node;  
+}
+</code></pre>
+
+<h4 id="_17">遍历</h4>
+<ol>
+<li>前序</li>
+</ol>
+<p>```c
+   void pre_order_traverse(btree_t *p_node)
+   {
+       if(NULL == p_node) {
+        return;
+    }
+    printf("%d,",p_node-&gt;data);</p>
+<pre><code>pre_order_traverse(p_node-&gt;lchild);
+pre_order_traverse(p_node-&gt;rchild);
+</code></pre>
+<p>}
+   ```</p>
+<ol>
+<li>中序</li>
+</ol>
+<p><code>c
+   void in_order_traverse(btree_t *p_node)
+   {
+       if(NULL == p_node) {
+        return;
+    }
+    pre_order_traverse(p_node-&gt;lchild);
+    printf("%d,",p_node-&gt;data);
+    pre_order_traverse(p_node-&gt;rchild);
+   }</code></p>
+<ol>
+<li>后序</li>
+</ol>
+<p>```c
+   void post_order_traverse(btree_t *p_node)
+   {
+       if(NULL == p_node) {
+        return;
+    }
+       pre_order_traverse(p_node-&gt;lchild);
+       pre_order_traverse(p_node-&gt;rchild);
+       printf("%d,",p_node-&gt;data);</p>
+<p>}
+   ```</p>
+<ol>
+<li>层序</li>
+</ol>
+<p>```c
+   void lever_order_traverse(btree_t <em>p_node)
+   {
+       //按照根左右的顺序入队
+    btree_t </em>p_index = NULL;
+       seq_queue_t *p_queue = seq_queue_create();
+    if(NULL != p_node) {
+        seq_queue_input(p_queue, p_node);
+    }
+    while (!seq_queue_is_empty(p_queue)) {
+            seq_queue_output(p_queue, &amp;p_index);</p>
+<pre><code>     if(p_index-&gt;lchild != NULL) {
+         seq_queue_input(p_queue, p_index-&gt;lchild);
+     }
+     if(p_index-&gt;rchild != NULL) {
+         seq_queue_input(p_queue,p_index-&gt;rchild);
+     } 
+     printf("%d,",p_index-&gt;data);
+}
+printf("\n-----------\n");
+</code></pre>
+<p>}
+   ```</p>
+<p>二叉树的创建和遍历主要使用了递归的思想。</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

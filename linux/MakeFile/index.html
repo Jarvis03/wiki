@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>MakeFile - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c/c语言拾遗/">C语言拾遗</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../">Linux_learn</a>
+</li>
+                                    
+<li >
+    <a href="../IO/">IO</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">MakeFile</a>
+</li>
+                                    
+<li >
+    <a href="../arm汇编/">ARM汇编</a>
+</li>
+                                    
+<li >
+    <a href="../cmake/">CMake</a>
+</li>
+                                    
+<li >
+    <a href="../link_list/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../linux_shell/">Linux shell</a>
+</li>
+                                    
+<li >
+    <a href="../开发环境搭建/">开发环境搭建</a>
+</li>
+                                    
+<li >
+    <a href="../数据结构/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../编译/">编译</a>
+</li>
+                                    
+<li >
+    <a href="../网络编程/">网络编程</a>
+</li>
+                                    
+<li >
+    <a href="../进程与线程/">进程</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../IO/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../arm汇编/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#makefile">MakeFile</a></li>
+            <li><a href="#_1">介绍</a></li>
+            <li><a href="#makefile_1">Makefile的内容</a></li>
+            <li><a href="#gnu-make">GNU make工作方式</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="makefile">MakeFile</h1>
+<h2 id="_1">介绍</h2>
+<h4 id="_2">基本规则</h4>
+<pre><code class="makefile">目标 ： 依赖
+[tab] 命令
+</code></pre>
+
+<h4 id="_3">命名</h4>
+<p>一般为<code>GNUmakefile</code>， <code>makefile</code>， <code>Makefile</code>，推荐使用<code>Makefile</code></p>
+<h4 id="_4">更新</h4>
+<p>依赖文件不存在或者文件有更新时，执行make会重新编译</p>
+<h2 id="makefile_1">Makefile的内容</h2>
+<p>在一个完整的 <code>Makefile</code>中,包含了 5 个东西:</p>
+<blockquote>
+<p>显式规则、隐含规则、变量定义、指示符和注释</p>
+</blockquote>
+<ol>
+<li><strong>显式规则</strong> ：显式规则说明了，如何生成一个或多的的目标文件。这是由Makefile的书写者明显指出，要生成的文件，文件的依赖文件，生成的命令。</li>
+<li><strong>隐晦规则</strong>：由于我们的make有自动推导的功能，所以隐晦的规则可以让我们比较粗糙地简略地书写Makefile，这是由make所支持的。</li>
+<li><strong>变量的定义</strong>：在Makefile中我们要定义一系列的变量，变量一般都是字符串，这个有点你C语言中的宏，当Makefile被执行时，其中的变量都会被扩展到相应的引用位置上。</li>
+<li><strong>指示符</strong>：其包括了三个部分，一个是在一个Makefile中引用另一个Makefile，就像C语言中的include一样；另一个是指根据某些情况指定Makefile中的有效部分，就像C语言中的预编译#if一样；还有就是定义一个多行的命令。有关这一部分的内容，我会在后续的部分中讲述。</li>
+<li><strong>注释</strong>：Makefile中只有行注释，和UNIX的Shell脚本一样，其注释是用“#”字符，这个就像C/C++中的“//”一样。如果你要在你的Makefile中使用“#”字符，可以用反斜框进行转义，如：“#”。</li>
+</ol>
+<h3 id="1">1. 显式规则</h3>
+<h4 id="11">1.1 基本规则</h4>
+<pre><code class="makefile">目标 ： 依赖
+[tab] 命令
+</code></pre>
+
+<h4 id="12">1.2 清空目标文件的规则</h4>
+<pre><code class="makefile">.PHONY clean
+clean:
+    rm $(OBJS)
+</code></pre>
+
+<p><code>.PHONY</code>表示一个伪目标，若不使用<code>.PHONY</code>，再次执行 <code>clean</code>会发现<code>clean</code>是最新的，无法实现清除的目的。<code>.PHONY</code>表示一个伪目标，并不是真是存在的，所以每次都可以执行<code>clean</code> 。</p>
+<h4 id="13">1.3 文件名使用通配符</h4>
+<p>Maekfile 中表示文件名时可使用通配符。可使用的通配符有:<code>*</code>、<code>?</code>和<code>[...]</code>。
+在 Makefile 中通配符的用法和含义和 Linux(unix)的 Bourne shell 完全相同。例如,<code>*.c”</code>代表了当前工作目录下所有的以<code>.c</code>结尾的文件等。但是在 Makefile 中这些统配符并不是可以用在任何地方,Makefile 中统配符可以出现在以下两种场合:</p>
+<ol>
+<li>
+<p>可以用在规则的目标、依赖中,make 在读取 Makefile 时会自动对其进行匹配处理(通配符展开);</p>
+</li>
+<li>
+<p>可出现在规则的命令中,通配符的通配处理是在 shell 在执行此命令时完成的。</p>
+</li>
+</ol>
+<p>除这两种情况之外的其它上下文中,不能直接使用通配符。而是需要通过函数<code>wildcard</code>来实现。</p>
+<h4 id="14">1.4 目录搜索</h4>
+<ul>
+<li>一般搜索<code>VPATH</code></li>
+</ul>
+<p><code>VPATH = src:../headers</code></p>
+<ul>
+<li>选择性搜索<code>vpath</code></li>
+<li>目录搜索机制</li>
+<li>命令行和搜索目录</li>
+<li>隐含规则和搜索目录</li>
+<li>库文件和搜索路径</li>
+</ul>
+<h4 id="15">1.5 静态模式</h4>
+<pre><code class="makefile">TARGETS ...: TARGET-PATTERN: PREREQ-PATTERNS ...
+    COMMANDS
+
+objects = foo.o bar.o
+all: $(objects)
+
+
+$(objects): %.o: %.c
+    $(CC) -c $(CFLAGS) $&lt; -o $@
+</code></pre>
+
+<p>规则描述了所有的.o文件的依赖文件为对应的.c文件,对于目标“foo.o”,取其茎“foo”替代对应的依赖模式“%.c”中的模式字符“%”之后可得到目标的依赖文件“foo.c”</p>
+<h3 id="2">2. 隐式规则</h3>
+<h4 id="21">2.1 自动推导规则</h4>
+<p><code>make</code>本身存在一个默认的规则,能够自动完成对<code>.c</code>文件的编译并生成对应的<code>.o</code>文件。我们就可以省略掉描述<code>.c</code>文件和<code>.o</code>依赖关系的规则,而只需要给出那些特定的规则描述</p>
+<pre><code class="makefile"># sample Makefile
+objects = main.o kbd.o command.o 
+
+edit : $(objects)
+    cc -o edit $(objects)
+main.o : defs.h         #自动推导
+kbd.o : defs.h command.h
+command.o : defs.h command.h
+
+.PHONY : clean
+clean :
+    rm edit $(objects)
+</code></pre>
+
+<h4 id="22">2.2 缺省规则</h4>
+<h4 id="23">2.3 后缀规则</h4>
+<h3 id="3">3.变量</h3>
+<h4 id="31">3.1 变量的引用</h4>
+<p>变量引用的展开过程是严格的文本替换过程,就是说变量值的字符串被精确的展开在变量被引用的地方。因此规则:</p>
+<pre><code class="makefile">foo = c
+prog.o : prog.$(foo)
+    $(foo) $(foo) -$(foo) prog.$(foo)
+</code></pre>
+
+<p>被展开后就是:</p>
+<pre><code class="makefile">prog.c : prog.c
+    cc -c prog.c
+</code></pre>
+
+<h4 id="32">3.2 设置变量</h4>
+<ul>
+<li><code>=</code>：递归方式</li>
+<li><code>：=</code>：静态方式</li>
+<li><code>+=</code>：追加方式</li>
+<li><code>？=</code>：条件赋值</li>
+</ul>
+<h4 id="33">3.3 自动化变量</h4>
+<ul>
+<li><code>$@</code>：表示规则的目标文件</li>
+<li><code>$&lt;</code>：规则的第一依赖文件</li>
+<li><code>$^</code>：规则的所有依赖文件表</li>
+<li><code>$?</code>：所有比目标文件更新的依赖文件表</li>
+</ul>
+<h4 id="34-makefiles">3.4 变量<code>MAKEFILES</code></h4>
+<p>如果在当前环境定义了一个<code>MAKEFILES</code>环境变量,make执行时首先将此变量的值作为需要读入的Makefile文件,多个文件之间使用空格分开。类似使用指示符<code>include</code>包含其它Makefile文件一样,如果文件名非绝对路径而且当前目录也不存在此文件,make会在一些默认的目录去寻找。
+它和使用<code>include</code>的区别:</p>
+<ol>
+<li>环境变量指定的 makefile 文件中的<code>目标</code>不会被作为<code>make</code> 执行的<code>终极目标</code>。就是说,这些文件中所定义规则的目标,<code>make</code> 不会将其作为<code>终极目标</code>来看待。<code>make</code> 执行时的<code>终极目标</code>就是当前目录下这个文件中所定义的<code>终极目标</code>。</li>
+<li>环境变量所定义的文件列表,在执行 make 时,如果不能找到其中某一个文件(不存在或者无法创建)。make 不会提示错误,也不退出。就是说环境变量<code>MAKEFILES</code>定义的包含文件是否存在不会导致 make 错误(这是比较隐蔽的地方)。</li>
+<li>make 在执行时,首先读取的是环境变量<code>MAKEFILES</code>所指定的文件列表,之后才是工作目录下的 makefile 文件,<code>include</code>所指定的文件是在 make 发现此关键字的时、暂停正在读取的文件而转去读取<code>include</code>所指定的文件。</li>
+<li>变量<code>MAKEFILES</code>主要用在<code>make</code>的递归调用过程中的的通信，实际应用中很少设置此变量。因为一旦设置了此变量,在多级make
+    调用时;由于每一级make都会读取“MAKEFILES”变量所指定的文件,将导致执行出,现混乱。</li>
+</ol>
+<h2 id="gnu-make">GNU make工作方式</h2>
+<h4 id="1-gnumake">1. GNU的make工作时的执行步骤</h4>
+<ol>
+<li>读入所有的Makefile。</li>
+<li>读入被include的其它Makefile。</li>
+<li>初始化文件中的变量。</li>
+<li>推导隐晦规则，并分析所有规则。</li>
+<li>为所有的目标文件创建依赖关系链。</li>
+<li>根据依赖关系，决定哪些目标要重新生成。</li>
+<li>执行生成命令。</li>
+</ol>
+<p>1-5步为第一个阶段，6-7为第二个阶段。第一个阶段中，如果定义的变量被使用了，那么，make会把其展开在使用的位置。但make并不会完全马上展开，make使用的是拖延战术，如果变量出现在依赖关系的规则中，那么仅当这条依赖被决定要使用了，变量才会在其内部展开</p>
+<h4 id="2make">2.嵌套Make</h4>
+<p>在一些大的工程中，我们会把我们不同模块或是不同功能的源文件放在不同的目录中，我们可以在每个目录中都书写一个该目录的Makefile，这有利于让我们的Makefile变得更加地简洁，而不至于把所有的东西全部写在一个Makefile中，这样会很难维护我们的Makefile，这个技术对于我们模块编译和分段编译有着非常大的好处。
+      例如，我们有一个子目录叫subdir，这个目录下有个Makefile文件，来指明了这个目录下文件的编译规则。那么我们总控的Makefile可以这样书写：</p>
+<pre><code class="makefile">subsystem:
+    cd subdir &amp;&amp; $(MAKE)
+</code></pre>
+
+<p>其等价于：</p>
+<pre><code class="makefile">subsystem:
+    $(MAKE) -C subdir
+</code></pre>
+
+<p>定义<code>$(MAKE)</code>宏变量的意思是，也许我们的<code>make</code>需要一些参数，所以定义成一个变量比较利于维护。这两个例子的意思都是先进入<code>subdir</code>目录，然后执行<code>make</code>命令。</p>
+<h4 id="makefile_2">Makefile示例</h4>
+<pre><code class="makefile">
+# $(notdir $(CURDIR)) 获取目录名
+
+TARGET = $(notdir $(CURDIR))
+
+CROSS_COMPILE = gcc
+
+SOURCES = $(wildcard *.c)
+HEADERS = $(wildcard *.h)
+
+#静态模式规则 .c 替换成 .o
+OBJFILES = $(patsubst %.c,%.o,$(SOURCES))
+#OBJFILES = $(SOURCES:%.c=%.o)
+
+all:$(TARGET)
+    @echo builded target:$^
+$(TARGET): $(OBJFILES)
+    @echo linking $@ from $^
+    $(CROSS_COMPILE) -o  $@ $^
+    @echo obj $(OBJFILES)
+$(OBJFILES): %.o:%.c
+    @echo compilinng $@ from $&lt; ...
+    $(CROSS_COMPILE) -c $&lt; -o $@
+    @echo Compile finished
+.PHONY :clean
+clean:
+    @echo Removing generated files
+    rm -rf $(TARGET) *.d *.o
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

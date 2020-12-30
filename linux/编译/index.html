@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>编译 - My Docs</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">My Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c/c语言拾遗/">C语言拾遗</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">C plusplus <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../c_plusplus/cpp知识点/">Cpp知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/qt入门知识点/">Qt入门知识点</a>
+</li>
+                                    
+<li >
+    <a href="../../c_plusplus/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../">Linux_learn</a>
+</li>
+                                    
+<li >
+    <a href="../IO/">IO</a>
+</li>
+                                    
+<li >
+    <a href="../MakeFile/">MakeFile</a>
+</li>
+                                    
+<li >
+    <a href="../arm汇编/">ARM汇编</a>
+</li>
+                                    
+<li >
+    <a href="../cmake/">CMake</a>
+</li>
+                                    
+<li >
+    <a href="../link_list/">链表</a>
+</li>
+                                    
+<li >
+    <a href="../linux_shell/">Linux shell</a>
+</li>
+                                    
+<li >
+    <a href="../开发环境搭建/">开发环境搭建</a>
+</li>
+                                    
+<li >
+    <a href="../数据结构/">链表</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">编译</a>
+</li>
+                                    
+<li >
+    <a href="../网络编程/">网络编程</a>
+</li>
+                                    
+<li >
+    <a href="../进程与线程/">进程</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Python <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../python/readme/">Readme</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../数据结构/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../网络编程/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">编译过程</a></li>
+            <li><a href="#1">1. 预处理</a></li>
+            <li><a href="#2">2. 编译</a></li>
+            <li><a href="#3">3. 汇编</a></li>
+            <li><a href="#4">4. 链接</a></li>
+            <li><a href="#5-gcc">5. GCC 编译选项</a></li>
+            <li><a href="#6gdb">6.GDB调试</a></li>
+            <li><a href="#7-c">7. C程序的储存空间布局</a></li>
+            <li><a href="#8">8. 共享库</a></li>
+            <li><a href="#_5">其他工具</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">编译过程</h1>
+<p>笔者使用 使用编译器为<code>GCC</code></p>
+<blockquote>
+<p>gcc 一般格式为 GCC [选项] 要编译的文件 [选项]  目标文件</p>
+</blockquote>
+<h3 id="1">1. 预处理</h3>
+<p>预处理相当于将预处理指令组装成新的程序，会替换宏，条件编译指令等内容。同原文件无异，知识内容有所不同。
+* 处理（#开头的指令）伪指令
+  -  将所有的 <code>#define</code> 删除，并展开所有的宏定义
+  -  处理所有条件编译指令，如 <code>#if</code> , <code>#endif</code> 
+  -  处理预编译指令 <code>#include</code> ，将包含的文件插入该位置
+*  删除所有注释
+*  添加行号和文件名标识
+*  保留所有的 <code>#pragma</code> 编译器指令</p>
+<blockquote>
+<p>gcc -E file.c  -o  file.i</p>
+<p>cpp -- 预处理器</p>
+</blockquote>
+<p><code>.i</code>是经过预处理的C原始程序</p>
+<h3 id="2">2. 编译</h3>
+<p>将预处理完的文件进行一系列的词法分析、语法分析、语义分析及优化后。产生响应的汇编代码文件</p>
+<blockquote>
+<p>gcc -S file.i -o file.s</p>
+<p>cc -- 编译器</p>
+</blockquote>
+<h3 id="3">3. 汇编</h3>
+<p>将编译完的汇编代码文件翻译成机器指令。并生成可重定位目标程序的 <code>.o</code> 文件。该文件是二进制文件，字节编码是机器指令。
+  汇编器是将汇编代码转变成机器可以执行的指令，每一个汇编语句几乎对应一条机器指令。所以汇编器的汇编过程相对于编译器比较简单。
+  它没有复杂的语法，也没有语义，不需要做指令优化。知识根据汇编只看和机器指令的对照表一一翻译即可。</p>
+<blockquote>
+<p>gcc -c file.s -o file.o</p>
+<p>as -- 汇编器</p>
+</blockquote>
+<h3 id="4">4. 链接</h3>
+<p>通过链接器将一个个目标文件（或许还有库文件）链接在一起生成一个完整的可执行程序。</p>
+<p>由汇编器生成的目标文件并不能立即执行，其中还有许多没有解决的问题
+  例如某个源文件中的函数可能引用了另一个源文件中定义的某个符号，程序中可能调用了某个库文件中的函数，等等。所以需要连接器处理</p>
+<p>链接程序的主要工作就是讲有关的目标文件彼此链接，也就是讲一个文件引用的符号同该符号在另外一个文件中的定义链接起来。
+使得所有的目标文件成为一个能够被操作系统装入执行的统一整体</p>
+<blockquote>
+<p>gcc file.o  -o file</p>
+<p>ld -- 连接器</p>
+</blockquote>
+<h3 id="5-gcc">5. GCC 编译选项</h3>
+<h4 id="1_1">1. 总体选项</h4>
+<ul>
+<li><code>-E</code>：仅作预处理，不进行编译，汇编和链接</li>
+<li><code>-S</code>： 编译到汇编语言，不进行汇编和链接</li>
+<li><code>-c</code>：编译到目标代码</li>
+<li><code>-o</code>： 输出为可执行程序</li>
+<li><code>-static</code>：禁止使用动态库</li>
+<li><code>-share</code>：尽量使用动态库</li>
+<li><code>-I dir</code>： 在头文件的搜索路径中添加dir</li>
+<li><code>-L dir</code>：在库文件的搜索路径中添加dir</li>
+<li><code>-llibrary</code>：链接名为<code>library</code>的库文件</li>
+</ul>
+<h4 id="2_1">2. 警告和出错</h4>
+<ul>
+<li>
+<p><code>-Wall</code>：打开所有类型语法警告</p>
+</li>
+<li>
+<p><code>-Wcomment</code>：当<code>/*</code>出现在<code>/*...*/</code>注释中，或者 <code>\</code>出现在<code>//...</code>注释结尾处会给出警告</p>
+</li>
+<li>
+<p><code>-fsyntax-only</code>：检查语法错误</p>
+</li>
+<li>
+<p><code>-w</code>：禁止所有警告信息</p>
+</li>
+</ul>
+<h3 id="6gdb">6.GDB调试</h3>
+<p>命令：<code>gcc -g file.c -o file</code></p>
+<p><strong>注意</strong>：一定加上参数<code>-g</code></p>
+<h5 id="1_2">1.设置断点</h5>
+<ul>
+<li><code>break &lt;linenum&gt;</code></li>
+<li><code>break &lt;function&gt;</code></li>
+<li><code>break * address</code></li>
+</ul>
+<p><code>break</code>也可以使用 <code>b</code></p>
+<h5 id="2_2">2. 查看断点</h5>
+<p><code>info break[n]</code> </p>
+<h5 id="3_1">3. 运行代码</h5>
+<p>输如<code>r</code>即可，默认是从首行开始运行，若想指定行开始运行可以载<code>r</code>后面加上行号。</p>
+<h5 id="4_1">4. 查看变量值</h5>
+<p><code>p+变量</code></p>
+<h4 id="_2">段错误</h4>
+<h5 id="1_3">1. 调试设置</h5>
+<ol>
+<li>检查<code>ulimit</code></li>
+</ol>
+<p><code>$ulimit -c</code> 若是0：表示禁止生成core文件，此时需要<code>ulimit -c unlimited</code>临时生效</p>
+<p>或者在<code>.bashrc</code> 添加 <code>ulimit - c unlimitd</code>，然后<code>source .bashrc</code>使其生效</p>
+<h5 id="2_3">2. 段错误调试</h5>
+<p><code>gdb ./file ./core</code>:可以查看具体段错误信息</p>
+<h3 id="7-c">7. C程序的储存空间布局</h3>
+<ul>
+<li><strong>正文段</strong>，这是有CPU执行的机器指令部分，通常正文段是可以共享的，另外正文段常常是只读的</li>
+<li><strong>初始化数据段</strong> ，通常此段成为数据段，包含了程序中需明确赋初值的变量，如函数之外的声明<code>int max = 99</code></li>
+<li><strong>未初始化的数据段</strong> ，通常成为bss段，来源于“由符号开始的块”（block started by symbol），程序开始执行之前，内核将此段中的数据初始化为0</li>
+<li><strong>栈</strong> 自动变量以及每次函数调用时所需保存的信息存于此段</li>
+<li><strong>堆</strong> 通常在堆中进行动态储存分配</li>
+</ul>
+<h3 id="8">8. 共享库</h3>
+<h4 id="_3">静态库步骤</h4>
+<ol>
+<li>把源码编译成目标文件（*.o）</li>
+</ol>
+<p><code>gcc - c  xxx.c</code></p>
+<ol>
+<li>用<code>ar</code>命令把目标文件生成lib文件</li>
+</ol>
+<p><code>ar crs libxxx.a  xxx.o</code></p>
+<ol>
+<li>生成的lib文件与主程序一起编译</li>
+</ol>
+<p>​        <code>gcc -o 目标文件 -L库路径 -lxxx</code></p>
+<p>​         <code>gcc -o 目标文件 -static -L库路径 -lxxx</code></p>
+<h4 id="_4">动态库步骤</h4>
+<ol>
+<li>编译目标文件</li>
+</ol>
+<p><code>gcc -c -fPIC xxx.c</code>  生成位置无关码</p>
+<ol>
+<li>生成动态链接库</li>
+</ol>
+<p><code>gcc -shared -o libxxx.so xxx.o</code></p>
+<ol>
+<li>编译</li>
+</ol>
+<p>​        <code>gcc -o 目标文件 -L库路径 -lxxx</code></p>
+<p><strong>Q</strong>：执行时候找不到库文件？</p>
+<ol>
+<li>动态库添加到系统的库文件目录</li>
+<li><code>export LD_LIBRARY=$LD_LIBRARY_PATH:你的动态路径</code></li>
+<li>添加<code>/etc/ld.so.conf.d/*conf</code>文件，执行<code>ldconfig</code>刷新</li>
+</ol>
+<h2 id="_5">其他工具</h2>
+<p>部分工具的使用， 需要编译时加<code>-g</code>选项</p>
+<h4 id="1-readelf">1. <code>readelf</code></h4>
+<p>elf文件头描述elf文件的总体信息。包括：系统相关，类型相关，加载相关，链接相关。 </p>
+<ul>
+<li>系统相关表示：elf文件标识的魔术数，以及硬件和平台等相关信息，增加了elf文件的移植性,使交叉编译成为可能。 </li>
+<li>类型相关就是前面说的那个类型。 </li>
+<li>加载相关：包括程序头表相关信息。 </li>
+<li>链接相关：节头表相关信息。 </li>
+</ul>
+<pre><code class="shell">$ readelf -h a.out
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           Advanced Micro Devices X86-64
+  Version:                           0x1
+  Entry point address:               0x400430
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          6688 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         9
+  Size of section headers:           64 (bytes)
+  Number of section headers:         31
+  Section header string table index: 28
+
+</code></pre>
+
+<h4 id="2-size">2. size</h4>
+<p>读取各个段大小</p>
+<pre><code class="shell">$size a.out
+   text    data     bss     dec     hex filename
+   1286     552       8    1846     736 file_io
+
+</code></pre>
+
+<h4 id="3-objcopy">3. objcopy</h4>
+<p>将目标文件的一部分或者全部拷贝到另一目标文件，或者实现目标文件类型转换</p>
+<pre><code class="shell">$objcopy -O binary a.out a.bin
+</code></pre>
+
+<h4 id="4-objdump">4. objdump</h4>
+<p>查看目标文件或者可执行的目标文件的构成</p>
+<ul>
+<li><code>-D</code>：反汇编所有的section</li>
+<li><code>-S</code>：尽可能反汇编出源代码，尤其是当编译的时候指定了<code>-g</code>这种调试参数时，效果比较明显，隐含了<code>-d</code>参数</li>
+</ul>
+<pre><code class="shell">$objdump -DS a.out &gt; a.dis
+</code></pre>
+
+<h4 id="5nm">5.nm</h4>
+<p>用于显示二进制目标文件的符号表，编译时需要加上<code>-g</code>选项</p>
+<pre><code class="shell">$nm a.out &gt; a.map
+# T/t       代码段
+# D/d       数据段
+# B/b       bss 段
+# R/r       只读数据段
+# 大写表示非静态  
+# 小写表示静态 static
+</code></pre>
+
+<h4 id="6-addr2line">6. addr2line</h4>
+<p>将地址转换成文件名和行号，给定了可执行程序中的地址或者重定向目标文件中的段的偏移地址，可以计算出相关的文件名字和行号</p>
+<pre><code class="shell">$addr2line -e test1 400506
+/home/hanfoo/code/test/addr2line/test1.c:5
+</code></pre>
+
+<h4 id="7-strip">7. strip</h4>
+<p>去掉文件调试信息，可以给可执行文件瘦身</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
