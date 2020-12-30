@@ -63,7 +63,39 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#3">3. # 字符串化操作符</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4">4. \ 行继续操作</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-va_args">5. VA_ARGS</a>
+    </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1"></a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#typedef">typedef</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1_1">1.  为数组定义类型</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2_1">2. 为指针定义类型</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3_1">3. 陷阱</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">数组</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1_2">1.数组名为常量</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2_2">2. 数组首地址</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#switch">switch</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#static">static</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">逗号运算符</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">{}作用域</a>
     </li>
     </ul>
                     </li>
@@ -176,7 +208,7 @@ char* str = Conn(&quot;asdf&quot;, &quot;adf&quot;);
 </code></pre>
 <h5 id="3">3. <code>#</code> 字符串化操作符</h5>
 <blockquote>
-<h1 id="stringificationx">表示字符串化操作符（stringification）。其作用是：将宏定义中的传入参数名转换成用一对双引号括起来参数名字符串。其只能用于有传入参数的宏定义中，且必须置于宏定义体中的参数名前。说白了，他是给x加双引号：</h1>
+<p>表示字符串化操作符（stringification）。其作用是：将宏定义中的传入参数名转换成用一对双引号括起来参数名字符串。其只能用于有传入参数的宏定义中，且必须置于宏定义体中的参数名前。说白了，他是给x加双引号：</p>
 </blockquote>
 <pre><code class="language-c"> char* str = ToString(123132);
  ==&gt; char* str=&quot;123132&quot;;
