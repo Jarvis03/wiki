@@ -1,0 +1,1634 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>字符设备 - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="My Docs" class="md-header-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              字符设备
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Welcome to My Wiki
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      C
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="C" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        C
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../c/c%E8%AF%AD%E8%A8%80%E6%8B%BE%E9%81%97/" class="md-nav__link">
+      C语言拾遗
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      C plusplus
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="C plusplus" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        C plusplus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../c_plusplus/cpp%E7%9F%A5%E8%AF%86%E7%82%B9/" class="md-nav__link">
+      Cpp知识点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../c_plusplus/qt%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86%E7%82%B9/" class="md-nav__link">
+      Qt入门知识点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../c_plusplus/readme/" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Linux
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Linux" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../" class="md-nav__link">
+      Linux_learn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../IO/" class="md-nav__link">
+      IO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../MakeFile/" class="md-nav__link">
+      MakeFile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../arm%E6%B1%87%E7%BC%96/" class="md-nav__link">
+      ARM汇编
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../cmake/" class="md-nav__link">
+      CMake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../link_list/" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../linux_shell/" class="md-nav__link">
+      Linux shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+      开发环境搭建
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+      链表
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BC%96%E8%AF%91/" class="md-nav__link">
+      编译
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+      网络编程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/" class="md-nav__link">
+      进程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-13" type="checkbox" id="nav-4-13" checked>
+    
+    <label class="md-nav__link" for="nav-4-13">
+      Linux driver
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Linux driver" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-13">
+        <span class="md-nav__icon md-icon"></span>
+        Linux driver
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../FileSystem/" class="md-nav__link">
+      FileSystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../FreeType/" class="md-nav__link">
+      FreeType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../bootloader/" class="md-nav__link">
+      Bootloader
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../kernel/" class="md-nav__link">
+      Kernel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../lcd/" class="md-nav__link">
+      Lcd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%86%85%E6%A0%B8%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%83%A7%E5%86%99/" class="md-nav__link">
+      内核与文件系统烧写
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%86%85%E6%A0%B8%E6%89%93%E8%A1%A5%E4%B8%81%E7%BC%96%E8%AF%91/" class="md-nav__link">
+      内核打补丁编译
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        字符设备
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      字符设备
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    字符设备驱动
+  </a>
+  
+    <nav class="md-nav" aria-label="字符设备驱动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    Makefile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    驱动相关命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printk" class="md-nav__link">
+    内核打印printk
+  </a>
+  
+    <nav class="md-nav" aria-label="内核打印printk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    获取命令行参数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    驱动三要素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    模块导出符号表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    字符设备驱动框架
+  </a>
+  
+    <nav class="md-nav" aria-label="字符设备驱动框架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    设备号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file_operations" class="md-nav__link">
+    file_operations结构体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    注册字符设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    创建设备节点
+  </a>
+  
+    <nav class="md-nav" aria-label="创建设备节点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    驱动框架
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    字符设备驱动实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    高级驱动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+      开发环境搭建
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../%E6%9C%80%E5%B0%8F%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+      最小根文件系统
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../%E7%B3%BB%E7%BB%9F%E7%A7%BB%E6%A4%8D/" class="md-nav__link">
+      系统移植
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../%E8%AE%BE%E5%A4%87%E6%A0%91/" class="md-nav__link">
+      设备树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../%E8%AE%BE%E5%A4%87%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+      设备模型
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    
+    <label class="md-nav__link" for="nav-5">
+      Python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Python" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../python/readme/" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    字符设备驱动
+  </a>
+  
+    <nav class="md-nav" aria-label="字符设备驱动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#makefile" class="md-nav__link">
+    Makefile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    驱动相关命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printk" class="md-nav__link">
+    内核打印printk
+  </a>
+  
+    <nav class="md-nav" aria-label="内核打印printk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    获取命令行参数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    驱动三要素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    模块导出符号表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    字符设备驱动框架
+  </a>
+  
+    <nav class="md-nav" aria-label="字符设备驱动框架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    设备号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file_operations" class="md-nav__link">
+    file_operations结构体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    注册字符设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    创建设备节点
+  </a>
+  
+    <nav class="md-nav" aria-label="创建设备节点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    驱动框架
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    字符设备驱动实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    高级驱动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>字符设备</h1>
+                
+                <h2 id="_1">字符设备驱动</h2>
+<p>在<a href="./knernel">内核移植</a>一章中有关于<code>konfig</code>的介绍，我们添加的驱动文件可以根据需求选择添加到<code>menuconfig</code>菜单中。本章节主要记录基本字符设备驱动开发的步骤。</p>
+<h3 id="makefile">Makefile</h3>
+<pre><code class="language-makefile">#若在PC上测试简单模块，则使用 uname命令获取内核路径
+#KERNELDIR=/lib/modules/$(shell uname -r)/build/
+KERNELDIR=/home/guo/Downloads/kernel-3.4.39
+PWD=$(shell pwd)
+all:
+#当make的目标为all时，-C $(KERNELDIR) 指明跳转到内核源码目录下读取那里的Makefile；M=$(PWD) 表明然后返回到当前目录继续读入、执行当前的Makefile。
+    make -C $(KERNELDIR) M=$(PWD) modules
+    @echo &quot;build on pc&quot;
+
+# M是个变量
+clean:
+    make -C $(KERNELDIR) M=$(PWD) clean
+#编译成模块
+obj-m:= hello.o
+
+ #内核make语法规则相较于标准Makefile规则有所扩展
+
+ #---------------------------------------
+ #多文件编译，例如hello.c add.c
+ # obj-m:=demo.o
+ # demo-y += hello.o add.o
+</code></pre>
+<h3 id="_2">驱动相关命令</h3>
+<p><code>insmod</code> ：加载驱动 
+<code>modprobe</code>：更加智能，加载驱动时候也会加载依赖的驱动
+<code>rmmod</code>：卸载驱动
+<code>lsmod</code>：显示已安装的驱动
+<code>dmesg</code>：查看消息，可以查看<code>printk</code>的所有消息</p>
+<h3 id="printk">内核打印printk</h3>
+<p>该函数格式为<code>printk(loglevel "XXXXXXX")</code></p>
+<pre><code class="language-c">//include/linux/printk.h    
+    #define KERN_EMERG  &quot;&lt;0&gt;&quot;   /* system is unusable           */
+    #define KERN_ALERT  &quot;&lt;1&gt;&quot;   /* action must be taken immediately */
+    #define KERN_CRIT   &quot;&lt;2&gt;&quot;   /* critical conditions          */
+    #define KERN_ERR    &quot;&lt;3&gt;&quot;   /* error conditions         */
+    #define KERN_WARNING    &quot;&lt;4&gt;&quot;   /* warning conditions           */
+    #define KERN_NOTICE &quot;&lt;5&gt;&quot;   /* normal but significant condition */
+    #define KERN_INFO   &quot;&lt;6&gt;&quot;   /* informational            */
+    #define KERN_DEBUG  &quot;&lt;7&gt;&quot;   /* debug-level messages
+// 0 - 7 (high - low)
+</code></pre>
+<p>通过命令<code>cat /proc/sys/kernel/printk</code> 查看打印级别设置</p>
+<pre><code class="language-shell">#   4       4          1       7
+#终端级别 消息默认级别  最大级别  最小级别 
+#-----------------------------------
+#修改默认级别
+echo 4 3 1 7 &gt; /proc/sys/kernel/printk
+
+#修改开发板对应的打印级别
+vi rootfs/etc/init.d/rcS
+echo 4 3 1 7 &gt; /proc/sys/kernel/printk
+</code></pre>
+<h4 id="_3">获取命令行参数</h4>
+<pre><code class="language-c">* Standard types are:                                                                             
+     *  byte, short, ushort, int, uint, long, ulong  (没有找到char!!!!!!!!)
+     *  charp: a character pointer
+     *  bool: a bool, values 0/1, y/n, Y/N.
+     *  invbool: the above, only sense-reversed (N = true).
+
+// 功能：接收命令行传递的参数
+//  @name :变量的名字
+//  @type :变量的类型
+//  @perm :权限  0664  0775
+module_param(name, type, perm) 
+//功能：对变量的功能进行描述
+//@_parm:变量
+//@desc :描述字段
+MODULE_PARM_DESC(_parm, desc)   
+
+//hello:     
+int a = 10;
+module_param(a,int,0664);
+MODULE_PARM_DESC(a,&quot;this is lcd light(0-255)&quot;);
+
+///sys/module/hello/paramters 可以查看参数
+//在加载模块时设置参数
+// sudo insmod hello.ko a=121
+</code></pre>
+<h3 id="_4">驱动三要素</h3>
+<pre><code class="language-c">#include &lt;linux/init.h&gt;
+#include &lt;linux/module.h&gt;
+//三要素：入口，出口，许可证
+//__init将hello_init放到.init.text段中
+static int __init  hello_init(void) 
+{
+      return 0;
+}
+//__exit将hello_exit放到.exit.text段中
+static void __exit hello_exit(void)
+{
+}
+module_init(hello_init);
+//告诉内核驱动的入口地址
+module_exit(hello_exit);
+MODULE_LICENSE(&quot;GPL&quot;);
+</code></pre>
+<h3 id="_5">模块导出符号表</h3>
+<p>一个模块中的函数或者变量提供给其他模块使用，此时需要利用<code>EXPORT_SYMBOL_GPL(symbol)</code>导出符号。</p>
+<ul>
+<li>编译</li>
+</ul>
+<p>先编译提供者，完成后会生成<code>Module.symvers</code>文件，将其拷贝至调用者的同级目录</p>
+<ul>
+<li>加载</li>
+</ul>
+<p>先加载提供者，在加载调用者</p>
+<ul>
+<li>卸载</li>
+</ul>
+<p>先卸载调用者再卸载提供者</p>
+<h3 id="_6">字符设备驱动框架</h3>
+<ol>
+<li>分配设备号</li>
+<li>设置<code>file_operations</code>结构体</li>
+<li>注册字符设备</li>
+<li>创建设备节点</li>
+</ol>
+<h5 id="_7">设备号</h5>
+<p>设备是32位无符号数字</p>
+<table>
+<thead>
+<tr>
+<th>32 - 20</th>
+<th>19 - 0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主设备号</td>
+<td>次设备号</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-c">#define MINORBITS   20
+#define MINORMASK   ((1U &lt;&lt; MINORBITS) - 1)
+
+#define MAJOR(dev)  ((unsigned int) ((dev) &gt;&gt; MINORBITS))
+#define MINOR(dev)  ((unsigned int) ((dev) &amp; MINORMASK))
+#define MKDEV(ma,mi)    (((ma) &lt;&lt; MINORBITS) | (mi))
+</code></pre>
+<p>设备号申请方式</p>
+<ol>
+<li>手动申请</li>
+</ol>
+<pre><code class="language-c">/*
+手动指定设备号
+@from :驱动工程师指定的设备号
+@count:设备的个数
+@name :名字 cat /proc/devices
+返回值：成功返回0，失败返回错误码
+*/
+int register_chrdev_region(dev_t from, unsigned count, const char *name)
+
+</code></pre>
+<ol>
+<li>自动申请设备号</li>
+</ol>
+<pre><code class="language-c">/*
+功能：内核申请设备号
+@dev       ：申请到的设备号
+@baseminor ：次设备号的起始值
+@count     :设备的个数
+@name      :名字 cat /proc/devices
+返回值：成功返回0，失败返回错误码
+*/
+int alloc_chrdev_region(dev_t *dev, unsigned baseminor, unsigned count,vconst char *name)
+
+//设备号释放的函数
+void unregister_chrdev_region(dev_t from, unsigned count)
+</code></pre>
+<h5 id="file_operations"><code>file_operations</code>结构体</h5>
+<pre><code class="language-c">struct file_operations {
+    struct module *owner;
+    loff_t (*llseek) (struct file *, loff_t, int);
+    ssize_t (*read) (struct file *, char __user *, size_t, loff_t *);
+    ssize_t (*write) (struct file *, const char __user *, size_t, loff_t *);
+    ssize_t (*aio_read) (struct kiocb *, const struct iovec *, unsigned long, loff_t);
+    ...
+    int (*open) (struct inode *, struct file *);
+    int (*flush) (struct file *, fl_owner_t id);
+    int (*release) (struct inode *, struct file *);
+    ...
+}
+</code></pre>
+<p>用户通过<code>open</code>，<code>read</code>，<code>write</code>等接口调用，来调用驱动中相应的函数。</p>
+<blockquote>
+<p>用户接口通过 系统调用，找到了VFS中相应sys_* 接口，具体过程以后补充</p>
+</blockquote>
+<h4 id="_8">注册字符设备</h4>
+<ol>
+<li>该接口会默认创建255个设备 （待确认）</li>
+</ol>
+<pre><code class="language-c">/* 
+@major：主设备号  
+              ：如果你填写的值大于0，它认为这个就是主设备号
+              ：如果你填写的值为0，操作系统给你分配一个主设备号               
+@name :名字   cat /proc/devices 
+@fops :操作方法结构体
+返回值：major&gt;0 ,成功返回0，失败返回错误码（负数） vi -t EIO
+            major=0,成功主设备号，失败返回错误码（负数）
+*/
+int register_chrdev(unsigned int major, const char *name, const struct file_operations *fops)
+/* 
+功能：注销一个字符设备驱动
+@major:主设备号
+@name:名字
+*/
+void unregister_chrdev(unsigned int major, const char *name)
+</code></pre>
+<ol>
+<li>手动注册</li>
+</ol>
+<pre><code class="language-c">//-----------------------------------------------------------------
+//   手动注册
+//-----------------------------------------------------------------
+/*  
+ 功能：字符设备驱动的注册
+ @p    :向注册的对象
+ @dev  :设备号
+ @count:个数
+ 返回值：成功返回0，失败返回错误码 
+*/
+int cdev_add(struct cdev *p, dev_t dev, unsigned count)
+
+void cdev_del(struct cdev *p)
+
+//若使用cdev_add，需要在此之前初始化结构体,如下
+
+ /*
+功能：cdev结构体的初始化，将fops填充到cdev中
+  @cdev :对象的地址
+  @fops :操作方法结构体的地址
+ */        
+ void cdev_init(struct cdev *cdev, const struct file_operations *fops)
+
+</code></pre>
+<h4 id="_9">创建设备节点</h4>
+<ol>
+<li>自动创建设备节点</li>
+</ol>
+<pre><code class="language-c">#include &lt;linux/device.h&gt;
+/*
+  自动创建设备节点：
+  功能：向用户空间提交目录信息
+  @owner :THIS_MODULE
+  @name  :目录名字
+  返回值：成功返回struct class *指针
+  错误返回错误码，错误是指针，位于最高地址4K，使用宏IS_ERR(cls)转换   
+*/
+struct class * class_create(owner, name)    
+//void class_destroy(struct class *cls)
+
+/*          
+ 功能：向用户空间提交文件信息
+  @class :录名字
+  @parent:NULL
+  @devt  :设备号
+  @drvdata :NULLc
+  @fmt   :文件的名字
+  返回值：成功返回struct device *指针
+            失败返回错误码指针       
+*/      
+struct device *device_create(struct class *class, struct device *parent,
+                     dev_t devt, void *drvdata, const char *fmt, ...)
+//void device_destroy(struct class *class, dev_t devt)
+
+
+</code></pre>
+<ol>
+<li>手动创建设备节点</li>
+</ol>
+<pre><code class="language-shell">sudo mknod hello (路径是任意) c/b  主设备号   次设备号
+</code></pre>
+<h5 id="_10">驱动框架</h5>
+<blockquote>
+<p>这里需要 一张图</p>
+</blockquote>
+<pre><code class="language-c">/*
+open()      read      write      close
+----------------------------------------
+       vfs
+-----------------------------------------
+fops.open fops.read fops.write fops.close
+*/
+struct inode{
+    umode_t  i_mode;   //文件的权限
+    unsigned long i_ino;//inode号
+    dev_t   i_rdev;   //设备号    
+    union {             //设备驱动的类型
+        struct block_device *i_bdev; 
+        struct cdev     *i_cdev;
+    };    
+};
+
+/*
+* 每个文件都有inode号，内核是如何通过inode 号建立联系？
+*/
+
+struct cdev {
+        struct module *owner;     //THIS_MODULE
+        const struct file_operations *ops; //操作方法结构体
+        dev_t dev;                //设备号 32   12|20  2^32=4G
+        unsigned int count;       //设备的个数
+};
+
+struct file{
+  const struct file_operations    *f_op;
+  ...
+}
+
+</code></pre>
+<p><strong>问题：如何通过<code>fd</code>来找到对应的驱动</strong></p>
+<p>调用<code>open</code>函数的时候产生<code>fd</code>,在进程中保存</p>
+<pre><code class="language-c">struct task_struct{  //进程结构体
+      struct files_struct *files; 
+        /../ ----&gt; struct file* fd_array[NR_OPEN_DEFAULT];
+
+}
+</code></pre>
+<p>当成功打开文件时候，会在内核中创建<code>struct file</code>结构体，并且把这个结构体放到<code>fd_array</code>的数组中，这个数组的下标就是文件描述符</p>
+<p><code>fd---&gt;fd_array[fd]---&gt;struct file---&gt;fops---&gt;(read  write ioctl release)</code></p>
+<p><code>file</code>结构体中有<code>fops</code>操作方法结构体，这个<code>fops</code>是从<code>inode</code>结构体中拷贝得到的，<code>inode</code>中的<code>fops</code>是从<code>cdev</code>中得到的。</p>
+<h5 id="_11">字符设备驱动实例</h5>
+<pre><code class="language-c">#include &lt;linux/module.h&gt;
+#include &lt;linux/init.h&gt;
+#include &lt;linux/fs.h&gt;
+#include &lt;linux/uaccess.h&gt;
+#include &lt;asm/io.h&gt;
+#include &lt;linux/device.h&gt;
+#include &lt;linux/cdev.h&gt;
+#include &lt;linux/slab.h&gt;
+
+#define  DRV_BUF_SIZE  128
+
+#define  CLASS_NAME    &quot;class_cdev&quot; // class create name
+#define  DEV_NAME      &quot;cdev_demo&quot;  // drives create name
+
+char buf[DRV_BUF_SIZE] = {0};
+struct cdev   *cdev;
+struct class  *cdev_cls;
+struct device *c_device;
+dev_t  devno;    // 设备号
+int major = 0;   // 主设备号
+
+static int drv_open(struct inode *node, struct file *filp)
+{
+    printk(&quot;open cdrv-demo\n&quot;);
+    return 0;
+}
+
+static ssize_t drv_write(struct file *file, const char __user *u_buf,size_t size, loff_t *offset)
+{
+    int ret = 0;
+    if (size &gt; DRV_BUF_SIZE) {
+        return -EINVAL;
+    }
+    ret = copy_from_user(buf, u_buf, size);
+    if (ret) {
+        printk(&quot;copy from  user failed :%d\n&quot;, ret);
+        return -EAGAIN;
+    }
+    printk(&quot;cdrv_demo write:%s\n&quot;,buf);
+    return size;
+}
+static ssize_t drv_read(struct file *file,char __user *u_buf, size_t size, loff_t *offset)
+{
+    int ret = 0;
+    if (size &gt; DRV_BUF_SIZE) {
+        return -EINVAL;
+    }
+    ret = copy_to_user(u_buf, buf, size);
+    if (ret) {
+        printk(&quot;copy to  user failed :%d\n&quot;, ret);
+        return -EAGAIN;
+    }
+    printk(&quot;cdrv_demo read:%s\n&quot;,buf);
+    return size;
+}
+
+static int drv_release(struct inode* node, struct file *filp)
+{
+    printk(&quot;cdrv_demo release\n&quot;);
+    return 0;
+}
+static struct file_operations file_ops = {
+    .open = drv_open,
+    .write = drv_write,
+    .read  = drv_read,
+    .release = drv_release,
+};
+
+#define  TOTAL_OF_DEV   3
+static int __init drv_demo_init(void)
+{
+    int ret = 0;
+    int i = 0;
+    //74 - 95行可以直接用 major = register_chrdev(0, DEV_NAME,&amp;file_ops)代替
+
+    //1. 分配对象
+    cdev = cdev_alloc();
+    if (cdev == NULL) {
+         ret = -ENOMEM;
+         goto err1;
+    }
+    //2. 初始化
+    cdev_init(cdev,&amp;file_ops);
+    //3.设备号请
+    if (major &gt; 0) {
+        ret = register_chrdev_region(MKDEV(major, 0),1, DEV_NAME);
+    } else {
+        ret = alloc_chrdev_region(&amp;devno, 0, TOTAL_OF_DEV, CLASS_NAME);
+    }
+    if(ret &lt; 0) {
+        goto err2;
+    }
+    //4. 注册
+    ret = cdev_add(cdev, devno, TOTAL_OF_DEV);
+    if (ret) {
+        printk(&quot;char device register failed\n&quot;);
+        goto err3;
+    }
+    cdev_cls = class_create(THIS_MODULE, CLASS_NAME);
+    if(IS_ERR(cdev_cls)) {
+        ret = PTR_ERR(cdev_cls);
+        goto err4;
+    }
+    major = MAJOR(devno);
+    for (i = 0;  i &lt; TOTAL_OF_DEV; i++) {
+        c_device = device_create(cdev_cls,NULL, MKDEV(major, i),NULL, &quot;cdev%d&quot;,i);  /* /proc/devices*/
+        if(IS_ERR(c_device)) {
+            ret = PTR_ERR(c_device);
+            goto err5;
+        }
+    }
+    printk(&quot;init done\n&quot;);
+    return 0; //一定要有
+err5:
+    for (--i; i &gt;= 0; i--) {
+        device_destroy(cdev_cls,MKDEV(major,i));
+    }
+    class_destroy(cdev_cls);
+err4:
+    cdev_del(cdev);
+err3:
+    unregister_chrdev_region(MKDEV(major,0),TOTAL_OF_DEV);
+err2:
+    kfree(cdev);
+err1:
+
+    return ret;
+}
+
+static void __exit drv_demo_exit(void)
+{
+    int i = 0;
+    for (i = 0; i &lt; TOTAL_OF_DEV; i++) {
+        device_destroy(cdev_cls, MKDEV(major,i));
+    }
+    class_destroy(cdev_cls);
+    cdev_del(cdev);
+    unregister_chrdev_region(devno, TOTAL_OF_DEV);
+    kfree(cdev);
+    free_irq(73, NULL);
+}
+
+module_init(drv_demo_init)
+module_exit(drv_demo_exit)
+
+MODULE_LICENSE(&quot;GPL&quot;);
+
+</code></pre>
+<h5 id="_12">高级驱动</h5>
+<pre><code class="language-c">#include &lt;sys/ioctl.h&gt;
+/*
+  @fd     : 打开文件产生的文件描述符
+  @request: 请求码(读写|第三个参数传递的字节的个数)，
+                ：在sys/ioctl.h中有这个请求码的定义方式。
+  @...    :可写、可不写，如果要写，写一个内存的地址
+*/
+int ioctl(int fd, int request, ...);        
+
+//驱动调用
+struct file_operations fops {
+    long (*unlocked_ioctl) (struct file *file, unsigned int request, unsigned long args);
+  ...
+}
+
+
+#define _IO(type,nr)        
+            _IOC(_IOC_NONE,(type),(nr),0)
+#define _IOR(type,nr,size)  
+            _IOC(_IOC_READ,(type),(nr),(_IOC_TYPECHECK(size)))
+#define _IOW(type,nr,size)  
+            _IOC(_IOC_WRITE,(type),(nr),(_IOC_TYPECHECK(size)))
+#define _IOWR(type,nr,size)     
+            _IOC(_IOC_READ|_IOC_WRITE,(type),(nr),(_IOC_TYPECHECK(size)))
+
+//这些宏是帮助你完成请求码的封装的。
+
+#define _IOC(dir,type,nr,size) \
+            (((dir)  &lt;&lt; _IOC_DIRSHIFT) | \
+             ((type) &lt;&lt; _IOC_TYPESHIFT) | \
+             ((nr)   &lt;&lt; _IOC_NRSHIFT) | \
+             ((size) &lt;&lt; _IOC_SIZESHIFT))
+
+
+dir &lt;&lt; 30 | size&lt;&lt;16 | type &lt;&lt; 8 | nr &lt;&lt; 0 
+2           14         8          8
+方向        大小       类型        序号
+</code></pre>
+<p>内核中已经使用的命令码的域在如下文档中已经声明了。<code>vi kernel-3.4.39/Documentation/ioctl$ vi ioctl-number.txt</code></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../%E5%86%85%E6%A0%B8%E6%89%93%E8%A1%A5%E4%B8%81%E7%BC%96%E8%AF%91/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                内核打补丁编译
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                开发环境搭建
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
